@@ -68,12 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Addmem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Addmem.Designer.cs">
-      <DependentUpon>Addmem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Connection\ConnDB.cs" />
     <Compile Include="Form\Addmem.cs">
       <SubType>Form</SubType>
@@ -225,9 +219,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Addmem.resx">
-      <DependentUpon>Addmem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\Addmem.resx">
       <DependentUpon>Addmem.cs</DependentUpon>
     </EmbeddedResource>
