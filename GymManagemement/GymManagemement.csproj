@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87F1DF7F-6B9C-4EA8-AFF0-18371FB757C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GymManagemement</RootNamespace>
+    <AssemblyName>GymManagemement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection\ConnDB.cs" />
+    <Compile Include="Form\Addmem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Addmem.Designer.cs">
+      <DependentUpon>Addmem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmAddProduct.Designer.cs">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmUpdateProduct.Designer.cs">
+      <DependentUpon>FrmUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmBuyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmBuyProduct.Designer.cs">
+      <DependentUpon>FrmBuyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmAddToCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmAddToCart.Designer.cs">
+      <DependentUpon>FrmAddToCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmListCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmListCart.Designer.cs">
+      <DependentUpon>FrmListCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelControls\UCLoadmember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\UCLoadmember.Designer.cs">
+      <DependentUpon>UCLoadmember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartManager.cs" />
+    <Compile Include="Models\Loadmember.cs" />
+    <Compile Include="Models\payment.cs" />
+    <Compile Include="ModelControls\Add_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\Add_Product.Designer.cs">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelControls\Product_Contain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\Product_Contain.Designer.cs">
+      <DependentUpon>Product_Contain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityItem.cs" />
+    <Compile Include="ModelControls\ActivityItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\ActivityItemControl.Designer.cs">
+      <DependentUpon>ActivityItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MemActive.cs" />
+    <Compile Include="Models\MemExpired.cs" />
+    <Compile Include="Models\NewMember.cs" />
+    <Compile Include="ModelControls\NewMemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\NewMemControl.Designer.cs">
+      <DependentUpon>NewMemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\SumAndRatio.cs" />
+    <Compile Include="ModelControls\UCMemActive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\UCMemActive.Designer.cs">
+      <DependentUpon>UCMemActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelControls\UCMemExpired.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\UCMemExpired.Designer.cs">
+      <DependentUpon>UCMemExpired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Load_Activity_Home.cs" />
+    <Compile Include="Services\Load_Member.cs" />
+    <Compile Include="Services\Load_Member_Home.cs" />
+    <Compile Include="Services\Load_payment.cs" />
+    <Compile Include="Services\Load_Product.cs" />
+    <Compile Include="Services\Load_SumAndRatio_Home.cs" />
+    <Compile Include="Services\Transaction.cs" />
+    <Compile Include="ModelControls\UCLoadpayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\UCLoadpayment.Designer.cs">
+      <DependentUpon>UCLoadpayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCMember.Designer.cs">
+      <DependentUpon>UCMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCPayment.Designer.cs">
+      <DependentUpon>UCPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCNotification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCNotification.Designer.cs">
+      <DependentUpon>UCNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCProduct.Designer.cs">
+      <DependentUpon>UCProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\Addmem.resx">
+      <DependentUpon>Addmem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmAddProduct.resx">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmAddToCart.resx">
+      <DependentUpon>FrmAddToCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmUpdateProduct.resx">
+      <DependentUpon>FrmUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmBuyProduct.resx">
+      <DependentUpon>FrmBuyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmListCart.resx">
+      <DependentUpon>FrmListCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\ActivityItemControl.resx">
+      <DependentUpon>ActivityItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\Add_Product.resx">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\NewMemControl.resx">
+      <DependentUpon>NewMemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\Product_Contain.resx">
+      <DependentUpon>Product_Contain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\UCLoadmember.resx">
+      <DependentUpon>UCLoadmember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\UCMemActive.resx">
+      <DependentUpon>UCMemActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\UCMemExpired.resx">
+      <DependentUpon>UCMemExpired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\UCLoadpayment.resx">
+      <DependentUpon>UCLoadpayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCMember.resx">
+      <DependentUpon>UCMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCPayment.resx">
+      <DependentUpon>UCPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCNotification.resx">
+      <DependentUpon>UCNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCProduct.resx">
+      <DependentUpon>UCProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\6648537.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\AO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Aqua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Available Updates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Avt_fixCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\BCAA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Bottom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\calender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\calender_fix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\calender_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Class_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\clock_fixsize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\coin_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\coin_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Combo Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Credit Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Credit Card_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Dai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Day_Khang_Luc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\delete_fixbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\dumbell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\dumbell_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\edit icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\edit_fixconer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Expired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\filter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\filter_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Gel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\gender_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\group_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Home_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\idcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\idcard_fixconer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\logo_fix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Logout_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\mail_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\member.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Member_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\member_fix2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\member_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\membership.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\membership_fix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\membership_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Notification_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\OIP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Package_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Personal Trainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Pre_Workout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Protein_bar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\phone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\phone_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Quan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\reload_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Schedule_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Shopping Cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Shopping Cart_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\tag_png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\testQ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\tick_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Towel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Tui_thethao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Tham.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Trainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Trainer_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\trainer_fixconer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\User Groups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\User Groups_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Whey_1kg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\X_fixcolor%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\X_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\z6607908416813_cccfd70ca6e18033572f6c608c953ec4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Shopping Trolley.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
