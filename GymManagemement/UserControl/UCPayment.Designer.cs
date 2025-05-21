@@ -131,6 +131,8 @@
             // 
             // flp_payment
             // 
+            this.flp_payment.AutoScroll = true;
+            this.flp_payment.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flp_payment.Location = new System.Drawing.Point(14, 277);
             this.flp_payment.Margin = new System.Windows.Forms.Padding(2);
             this.flp_payment.Name = "flp_payment";

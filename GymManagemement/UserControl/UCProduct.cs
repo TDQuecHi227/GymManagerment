@@ -36,8 +36,13 @@ namespace GymManagemement
                 Product_Contain productContain = new Product_Contain();
                 productContain.SetData(product);
                 productContain.Click += Product_Contain_Click;
+                productContain.ProductBought += ProductContain_ProductBought;
                 flpProduct.Controls.Add(productContain);
             }
+        }
+        private void ProductContain_ProductBought(object sender, EventArgs e)
+        {
+            LoadProducts();
         }
         private void Product_Contain_Click(object sender, EventArgs e)
         {

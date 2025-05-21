@@ -16,6 +16,7 @@ namespace GymManagemement.ModelControls
 { 
     public partial class Product_Contain : UserControl
     {
+        public event EventHandler ProductBought;
         public Product ProductData { get; private set; }
         ConnDB conndb = new ConnDB();
         public Product_Contain()
@@ -46,7 +47,10 @@ namespace GymManagemement.ModelControls
         {
             FrmBuyProduct buyProductForm = new FrmBuyProduct();
             buyProductForm.LoadData(ProductData);
-            buyProductForm.ShowDialog();
+            if (buyProductForm.ShowDialog() == DialogResult.OK)
+            {
+                ProductBought?.Invoke(this, EventArgs.Empty); // Gửi thông báo cho cha
+            }
         }
 
         private void btnAddCart_Click(object sender, EventArgs e)
