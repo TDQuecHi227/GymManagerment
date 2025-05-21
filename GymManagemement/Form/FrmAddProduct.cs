@@ -35,7 +35,7 @@ namespace GymManagemement
             Load_Product load_Product = new Load_Product();
             Product product = new Product();
             product.Name = txtName.Text.Trim();
-            product.Price = int.Parse(txtPrice.Text.Trim());
+            product.Price = int.Parse(txtPrice.Text.Trim().Replace(".",""));
             product.Quantity = int.Parse(txtQuantity.Text.Trim());
             product.Description = txtDescription.Text.Trim();
             byte[] image = null;
@@ -59,6 +59,18 @@ namespace GymManagemement
             {
                 MessageBox.Show("Thêm thất bại!");
             }
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrice.Text == "") return;
+            string text = txtPrice.Text.Replace(".", "");
+            if (!long.TryParse(text, out long value)) return;
+            int selStart = txtPrice.SelectionStart;
+            int lengthBefore = txtPrice.Text.Length;
+            txtPrice.Text = value.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
+            int lengthAfter = txtPrice.Text.Length;
+            txtPrice.SelectionStart = selStart + (lengthAfter - lengthBefore);
         }
     }
 }

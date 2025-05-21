@@ -127,7 +127,8 @@ namespace GymManagemement
             Transaction transaction = new Transaction();
             if (transaction.transaction_product(product, phone, paymentMethod))
             {
-                MessageBox.Show("Thanh toán thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Thanh toán thành công");
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else

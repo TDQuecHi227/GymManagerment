@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_Contain));
             this.PicProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbName_Product = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -44,7 +43,6 @@
             // PicProduct
             // 
             this.PicProduct.BackColor = System.Drawing.Color.White;
-            this.PicProduct.Image = ((System.Drawing.Image)(resources.GetObject("PicProduct.Image")));
             this.PicProduct.ImageRotate = 0F;
             this.PicProduct.Location = new System.Drawing.Point(0, 0);
             this.PicProduct.Name = "PicProduct";

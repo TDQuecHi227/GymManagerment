@@ -143,6 +143,7 @@
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(174, 22);
             this.txtPrice.TabIndex = 23;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // txtName
             // 

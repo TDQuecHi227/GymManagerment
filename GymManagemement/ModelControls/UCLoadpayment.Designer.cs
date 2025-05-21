@@ -43,7 +43,7 @@
             this.lb_status.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_status.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lb_status.Location = new System.Drawing.Point(719, 7);
-            this.lb_status.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_status.Margin = new System.Windows.Forms.Padding(2);
             this.lb_status.Name = "lb_status";
             this.lb_status.Size = new System.Drawing.Size(36, 17);
             this.lb_status.TabIndex = 49;
@@ -55,7 +55,7 @@
             this.lb_date.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_date.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lb_date.Location = new System.Drawing.Point(553, 7);
-            this.lb_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_date.Margin = new System.Windows.Forms.Padding(2);
             this.lb_date.Name = "lb_date";
             this.lb_date.Size = new System.Drawing.Size(28, 17);
             this.lb_date.TabIndex = 48;
@@ -67,7 +67,7 @@
             this.lb_amount.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_amount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lb_amount.Location = new System.Drawing.Point(396, 7);
-            this.lb_amount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_amount.Margin = new System.Windows.Forms.Padding(2);
             this.lb_amount.Name = "lb_amount";
             this.lb_amount.Size = new System.Drawing.Size(47, 17);
             this.lb_amount.TabIndex = 47;
@@ -79,7 +79,7 @@
             this.lb_phone.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_phone.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lb_phone.Location = new System.Drawing.Point(218, 7);
-            this.lb_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_phone.Margin = new System.Windows.Forms.Padding(2);
             this.lb_phone.Name = "lb_phone";
             this.lb_phone.Size = new System.Drawing.Size(37, 17);
             this.lb_phone.TabIndex = 46;
@@ -91,7 +91,7 @@
             this.lb_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ID.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lb_ID.Location = new System.Drawing.Point(14, 7);
-            this.lb_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_ID.Margin = new System.Windows.Forms.Padding(2);
             this.lb_ID.Name = "lb_ID";
             this.lb_ID.Size = new System.Drawing.Size(81, 17);
             this.lb_ID.TabIndex = 45;
@@ -100,6 +100,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.BackgroundImage = global::GymManagemement.Properties.Resources.delete_fixbg;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
@@ -107,7 +108,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(895, 7);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(16, 17);
             this.button2.TabIndex = 52;
@@ -116,6 +117,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.BackgroundImage = global::GymManagemement.Properties.Resources.edit_fixconer;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -123,7 +125,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(876, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(16, 17);
             this.button1.TabIndex = 51;
@@ -140,7 +142,7 @@
             this.Controls.Add(this.lb_amount);
             this.Controls.Add(this.lb_phone);
             this.Controls.Add(this.lb_ID);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCLoadpayment";
             this.Size = new System.Drawing.Size(921, 33);
             this.ResumeLayout(false);
