@@ -56,11 +56,9 @@
             this.btn_clearname = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_close = new Guna.UI2.WinForms.Guna2Button();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_none = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_none = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -68,6 +66,8 @@
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pl_addmem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -577,6 +577,7 @@
             this.btn_clearname.FillColor = System.Drawing.Color.Transparent;
             this.btn_clearname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_clearname.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_clearname.Image = global::GymManagemement.Properties.Resources.X_fixcolor_1_;
             this.btn_clearname.Location = new System.Drawing.Point(530, 27);
             this.btn_clearname.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clearname.Name = "btn_clearname";
@@ -631,52 +632,6 @@
             this.btn_add.Text = "+Add";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // btn_none
-            // 
-            this.btn_none.BackColor = System.Drawing.Color.White;
-            this.btn_none.BorderColor = System.Drawing.Color.Silver;
-            this.btn_none.BorderRadius = 8;
-            this.btn_none.BorderThickness = 1;
-            this.btn_none.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_none.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_none.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_none.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_none.FillColor = System.Drawing.SystemColors.Control;
-            this.btn_none.Font = new System.Drawing.Font("Segoe UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_none.ForeColor = System.Drawing.Color.Black;
-            this.btn_none.Location = new System.Drawing.Point(142, 199);
-            this.btn_none.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_none.Name = "btn_none";
-            this.btn_none.PressedColor = System.Drawing.Color.Gray;
-            this.btn_none.Size = new System.Drawing.Size(77, 23);
-            this.btn_none.TabIndex = 70;
-            this.btn_none.Tag = "traintype";
-            this.btn_none.Text = "None";
-            this.btn_none.Click += new System.EventHandler(this.btn_none_Click);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(20, 3);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(123, 30);
-            this.guna2HtmlLabel1.TabIndex = 14;
-            this.guna2HtmlLabel1.Text = "Add member";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(20, 30);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(148, 17);
-            this.guna2HtmlLabel2.TabIndex = 15;
-            this.guna2HtmlLabel2.Text = "Add new member into data";
-            // 
             // guna2PictureBox10
             // 
             this.guna2PictureBox10.BackColor = System.Drawing.Color.White;
@@ -702,6 +657,29 @@
             this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox9.TabIndex = 72;
             this.guna2PictureBox9.TabStop = false;
+            // 
+            // btn_none
+            // 
+            this.btn_none.BackColor = System.Drawing.Color.White;
+            this.btn_none.BorderColor = System.Drawing.Color.Silver;
+            this.btn_none.BorderRadius = 8;
+            this.btn_none.BorderThickness = 1;
+            this.btn_none.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_none.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_none.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_none.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_none.FillColor = System.Drawing.SystemColors.Control;
+            this.btn_none.Font = new System.Drawing.Font("Segoe UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_none.ForeColor = System.Drawing.Color.Black;
+            this.btn_none.Location = new System.Drawing.Point(142, 199);
+            this.btn_none.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_none.Name = "btn_none";
+            this.btn_none.PressedColor = System.Drawing.Color.Gray;
+            this.btn_none.Size = new System.Drawing.Size(77, 23);
+            this.btn_none.TabIndex = 70;
+            this.btn_none.Tag = "traintype";
+            this.btn_none.Text = "None";
+            this.btn_none.Click += new System.EventHandler(this.btn_none_Click);
             // 
             // guna2PictureBox8
             // 
@@ -791,6 +769,29 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(20, 3);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(123, 30);
+            this.guna2HtmlLabel1.TabIndex = 14;
+            this.guna2HtmlLabel1.Text = "Add member";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(20, 30);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(148, 17);
+            this.guna2HtmlLabel2.TabIndex = 15;
+            this.guna2HtmlLabel2.Text = "Add new member into data";
             // 
             // Addmem
             // 
