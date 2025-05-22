@@ -1,0 +1,64 @@
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.csproj.AssemblyReference.cache
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.Addmem.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmAddProduct.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmUpdateProduct.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmBuyProduct.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.ActivityItemControl.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.ModelControls.Add_Product.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.NewMembers.NewMemControl.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.ModelControls.Product_Contain.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCLoadmember.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCMemActive.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCMemExpired.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCLoadpayment.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCMember.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCPayment.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCNotification.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCProduct.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCHome.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmLogin.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmDashboard.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.Properties.Resources.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.csproj.GenerateResource.cache
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\bin\Debug\GymManagemement.exe.config
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\bin\Debug\GymManagemement.exe
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\bin\Debug\GymManagemement.pdb
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\bin\Debug\Guna.UI2.dll
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManag.0F0F6A22.Up2Date
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.exe
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.pdb
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmAddToCart.resources
+C:\Users\ADMIN\source\repos\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmListCart.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\bin\Debug\GymManagemement.exe.config
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\bin\Debug\GymManagemement.exe
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\bin\Debug\GymManagemement.pdb
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\bin\Debug\Guna.UI2.dll
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.csproj.AssemblyReference.cache
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.Addmem.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmAddProduct.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmAddToCart.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmUpdateProduct.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmBuyProduct.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmListCart.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.ActivityItemControl.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.ModelControls.Add_Product.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.NewMembers.NewMemControl.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.ModelControls.Product_Contain.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCLoadmember.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCMemActive.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCMemExpired.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCLoadpayment.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCMember.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCPayment.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCNotification.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCProduct.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.UCHome.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmLogin.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.FrmDashboard.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.Properties.Resources.resources
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.csproj.GenerateResource.cache
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.csproj.CoreCompileInputs.cache
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManag.0F0F6A22.Up2Date
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.exe
+D:\Đại Học\HKII_25-26\WinForm\GymManagemement\GymManagemement\obj\Debug\GymManagemement.pdb
