@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCart = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.contextMenuDGV = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnESC = new Guna.UI2.WinForms.Guna2Button();
             this.btnDone = new Guna.UI2.WinForms.Guna2Button();
             this.picBank = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -51,14 +53,14 @@
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            this.contextMenuDGV = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbName_Mem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
+            this.contextMenuDGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.plCash.SuspendLayout();
-            this.contextMenuDGV.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvCart
@@ -116,6 +118,29 @@
             this.dgvCart.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCart.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvCart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvCart_MouseDown);
+            // 
+            // contextMenuDGV
+            // 
+            this.contextMenuDGV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Delete});
+            this.contextMenuDGV.Name = "contextMenuDGV";
+            this.contextMenuDGV.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.contextMenuDGV.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.contextMenuDGV.RenderStyle.ColorTable = null;
+            this.contextMenuDGV.RenderStyle.RoundedEdges = true;
+            this.contextMenuDGV.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.contextMenuDGV.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.contextMenuDGV.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.contextMenuDGV.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.contextMenuDGV.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.contextMenuDGV.Size = new System.Drawing.Size(95, 26);
+            // 
+            // Delete
+            // 
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(94, 22);
+            this.Delete.Text = "Xóa";
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // btnESC
             // 
@@ -265,7 +290,7 @@
             this.plCash.Controls.Add(this.guna2HtmlLabel5);
             this.plCash.Location = new System.Drawing.Point(0, 364);
             this.plCash.Name = "plCash";
-            this.plCash.Size = new System.Drawing.Size(303, 65);
+            this.plCash.Size = new System.Drawing.Size(293, 65);
             this.plCash.TabIndex = 62;
             this.plCash.Visible = false;
             // 
@@ -334,7 +359,7 @@
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(331, 333);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(306, 333);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(107, 19);
             this.guna2HtmlLabel8.TabIndex = 73;
@@ -352,42 +377,41 @@
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(331, 358);
+            this.txtPhone.Location = new System.Drawing.Point(306, 358);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(107, 24);
             this.txtPhone.TabIndex = 72;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnlyNumber_KeyPress);
             // 
-            // contextMenuDGV
+            // guna2HtmlLabel1
             // 
-            this.contextMenuDGV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Delete});
-            this.contextMenuDGV.Name = "contextMenuDGV";
-            this.contextMenuDGV.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.contextMenuDGV.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.contextMenuDGV.RenderStyle.ColorTable = null;
-            this.contextMenuDGV.RenderStyle.RoundedEdges = true;
-            this.contextMenuDGV.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.contextMenuDGV.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.contextMenuDGV.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.contextMenuDGV.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.contextMenuDGV.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.contextMenuDGV.Size = new System.Drawing.Size(95, 26);
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(307, 388);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(106, 19);
+            this.guna2HtmlLabel1.TabIndex = 74;
+            this.guna2HtmlLabel1.Text = "Tên Khách Hàng: ";
             // 
-            // Delete
+            // lbName_Mem
             // 
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(94, 22);
-            this.Delete.Text = "Xóa";
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            this.lbName_Mem.BackColor = System.Drawing.Color.Transparent;
+            this.lbName_Mem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName_Mem.Location = new System.Drawing.Point(306, 413);
+            this.lbName_Mem.Name = "lbName_Mem";
+            this.lbName_Mem.Size = new System.Drawing.Size(3, 2);
+            this.lbName_Mem.TabIndex = 75;
             // 
             // FrmListCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 517);
+            this.Controls.Add(this.lbName_Mem);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.picBank);
@@ -408,12 +432,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FrmListCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
+            this.contextMenuDGV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.plCash.ResumeLayout(false);
             this.plCash.PerformLayout();
-            this.contextMenuDGV.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,5 +467,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip contextMenuDGV;
         private System.Windows.Forms.ToolStripMenuItem Delete;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbName_Mem;
     }
 }

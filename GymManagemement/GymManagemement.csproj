@@ -111,6 +111,7 @@
     <Compile Include="ModelControls\UCLoadmember.Designer.cs">
       <DependentUpon>UCLoadmember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ActivityList.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartManager.cs" />
     <Compile Include="Models\Loadmember.cs" />

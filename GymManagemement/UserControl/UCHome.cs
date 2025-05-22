@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using GymManagemement.Activities;
+using GymManagemement.Models;
 using GymManagemement.NewMembers;
 using GymManagemement.Services;
 
@@ -51,14 +52,8 @@ namespace GymManagemement
         }
         private void LoadDataActivity()
         {
-            List<ActivityItem> list = new List<ActivityItem>
-            {
-                new ActivityItem { Description = "Nguyễn Thị A đã đăng ký gói tập Premium", TimeAgo = "2 giờ trước" },
-                new ActivityItem { Description = "Trần Văn B đã hoàn thành buổi tập với PT", TimeAgo = "3 giờ trước" },
-                new ActivityItem { Description = "Lê Văn C đã đăng ký lớp Yoga", TimeAgo = "5 giờ trước" }
-            };
-
-            foreach (var item in list)
+            flpActivities.Controls.Clear();
+            foreach (var item in ActivityList.activities)
             {
                 var ctrl = new ActivityItemControl();
                 ctrl.SetData(item);

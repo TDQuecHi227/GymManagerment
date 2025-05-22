@@ -111,5 +111,19 @@ namespace GymManagemement.Service
 
             return conn.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
         }
+        public string findMem_Product(string phone, ref string err)
+        {
+            string query = $"SELECT * FROM members WHERE phone = {phone}";
+            var ds = conn.ExecuteQueryData(query, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+               return ds.Tables[0].Rows[0]["full_name"].ToString();
+            }
+            else
+            {
+                err = "Không tìm thấy thành viên với số điện thoại này.";
+                return null;
+            }
+        }
     }
 }
