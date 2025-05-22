@@ -9,7 +9,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GymManagemement.Models;
+using GymManagemement.Service;
 using GymManagemement.Services;
+using TheArtOfDevHtmlRenderer.Core.Entities;
 
 namespace GymManagemement
 {
@@ -24,6 +26,10 @@ namespace GymManagemement
         }
 
         private void FrmListCart_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        private void LoadData()
         {
             dgvCart.DataSource = null;
             var dataSource = CartManager.CartList.Select(c => new
@@ -42,7 +48,7 @@ namespace GymManagemement
 
         private void Cash_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Cash";
+            paymentMethod = "Tiền mặt";
             plCash.Visible = true;
             picBank.Visible = false;
         }
@@ -80,31 +86,15 @@ namespace GymManagemement
 
         private void Bank_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Bank";
+            paymentMethod = "Chuyển khoản";
             plCash.Visible = false;
             picBank.Visible = true;
         }
-        private void txtOnlyNumber_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Chỉ cho phép số và phím điều hướng
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void btnDone_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtPhone.Text))
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            // Kiểm tra số điện thoại: đúng 10 chữ số, không chứa ký tự khác
-            string phonePattern = @"^\d{10}$";
-            if (!Regex.IsMatch(txtPhone.Text.Trim(), phonePattern))
-            {
-                MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng nhập lại.", "Lỗi định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Convert.ToInt32(lbThua.Text.Replace(".", "")) < 0)
@@ -144,6 +134,50 @@ namespace GymManagemement
         {
             CartManager.ClearCart();
             this.Close();
+        }
+        private void dgvCart_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hitTestInfo = dgvCart.HitTest(e.X, e.Y);
+                if (hitTestInfo.RowIndex >= 0)
+                {
+                    dgvCart.ClearSelection();
+                    dgvCart.Rows[hitTestInfo.RowIndex].Selected = true;
+                    dgvCart.CurrentCell = dgvCart.Rows[hitTestInfo.RowIndex].Cells[0];
+                }
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if(dgvCart.SelectedRows.Count > 0)
+            {
+                int productId = Convert.ToInt32(dgvCart.SelectedRows[0].Cells["ID_SP"].Value);
+                CartManager.RemoveFromCart(productId);
+                LoadData();
+            }
+        }
+        private void txtOnlyNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (!char.IsControl(e.KeyChar) && txtPhone.Text.Length >= 10)
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            string phone = txtPhone.Text.Trim();
+            string err = "";
+            Load_Member load_Member = new Load_Member();
+            if (phone.Length == 10)
+            {
+                lbName_Mem.Text = load_Member.findMem_Product(phone, ref err);
+            }
         }
     }
 }

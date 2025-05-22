@@ -36,7 +36,7 @@
             // 
             this.lbDescription.BackColor = System.Drawing.Color.Transparent;
             this.lbDescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescription.Location = new System.Drawing.Point(15, 9);
+            this.lbDescription.Location = new System.Drawing.Point(11, 9);
             this.lbDescription.Name = "lbDescription";
             this.lbDescription.Size = new System.Drawing.Size(34, 17);
             this.lbDescription.TabIndex = 1;
@@ -46,7 +46,7 @@
             // 
             this.lbTime.BackColor = System.Drawing.Color.Transparent;
             this.lbTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(540, 11);
+            this.lbTime.Location = new System.Drawing.Point(600, 9);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(53, 17);
             this.lbTime.TabIndex = 2;
@@ -60,7 +60,7 @@
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.lbDescription);
             this.Name = "ActivityItemControl";
-            this.Size = new System.Drawing.Size(620, 35);
+            this.Size = new System.Drawing.Size(670, 35);
             this.ResumeLayout(false);
             this.PerformLayout();
 

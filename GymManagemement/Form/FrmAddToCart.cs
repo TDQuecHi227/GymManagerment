@@ -82,7 +82,6 @@ namespace GymManagemement
                 Price = product.Price
             };
             CartManager.AddToCart(cart);
-            MessageBox.Show("Thêm vào giỏ hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }

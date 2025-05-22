@@ -8,7 +8,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GymManagemement.Activities;
 using GymManagemement.Models;
+using GymManagemement.Service;
 using GymManagemement.Services;
 
 namespace GymManagemement
@@ -51,7 +53,7 @@ namespace GymManagemement
             {
                 Sl++;
             }
-                txtQuantity.Text = Sl.ToString();
+            txtQuantity.Text = Sl.ToString();
             Tongtien = (Sl * Convert.ToInt32(lbPrice.Text.Replace(" VND", "").Replace(".", "")));
             lbTotal.Text = Tongtien.ToString("N0");
         }
@@ -105,14 +107,7 @@ namespace GymManagemement
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }
-            // Kiểm tra số điện thoại: đúng 10 chữ số, không chứa ký tự khác
-            string phonePattern = @"^\d{10}$";
-            if (!Regex.IsMatch(txtPhone.Text.Trim(), phonePattern))
-            {
-                MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng nhập lại.", "Lỗi định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            }          
             if (Convert.ToInt32(lbThua.Text.Replace(".", "")) < 0)
             {
                 MessageBox.Show("Tiền trả không đủ.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -127,6 +122,11 @@ namespace GymManagemement
             Transaction transaction = new Transaction();
             if (transaction.transaction_product(product, phone, paymentMethod))
             {
+                    ActivityList.activities.Insert(0, new ActivityItem
+                    {
+                        Description = $"{lbName_Mem.Text.Trim()} đã mua {product.Name} ({paymentMethod})",
+                        TimeAgo = DateTime.Now
+                    });
                 MessageBox.Show("Thanh toán thành công");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -139,14 +139,14 @@ namespace GymManagemement
 
         private void Cash_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Cash";
+            paymentMethod = "Tiền mặt";
             plCash.Visible = true;
             picBank.Visible = false;
         }
 
         private void Bank_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Bank";
+            paymentMethod = "Chuyển khoản";
             picBank.Visible = true;
             plCash.Visible = false;
         }
@@ -185,7 +185,21 @@ namespace GymManagemement
             {
                 e.Handled = true;
             }
+            if (!char.IsControl(e.KeyChar) && txtPhone.Text.Length >= 10)
+            {
+                e.Handled = true;
+            }
         }
 
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            string phone = txtPhone.Text.Trim();
+            string err = "";
+            Load_Member load_Member = new Load_Member();
+            if (phone.Length == 10)
+            {
+                lbName_Mem.Text = load_Member.findMem_Product(phone, ref err);
+            }
+        }
     }
 }

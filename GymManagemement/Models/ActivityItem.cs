@@ -9,6 +9,6 @@ namespace GymManagemement.Activities
     public class ActivityItem
     {
         public string Description { get; set; }
-        public string TimeAgo { get; set; }
+        public DateTime TimeAgo { get; set; }
     }
 }

@@ -59,6 +59,8 @@
             this.btnMinus = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlus = new Guna.UI2.WinForms.Guna2Button();
             this.PicProduct = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbName_Mem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.plCash.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -80,7 +82,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(209, 162);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(208, 162);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(104, 32);
             this.guna2HtmlLabel4.TabIndex = 32;
@@ -90,7 +92,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(210, 105);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(208, 114);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(103, 32);
             this.guna2HtmlLabel3.TabIndex = 31;
@@ -100,7 +102,7 @@
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(210, 51);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(208, 67);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(149, 32);
             this.guna2HtmlLabel7.TabIndex = 30;
@@ -110,7 +112,7 @@
             // 
             this.lbName_Product.BackColor = System.Drawing.Color.Transparent;
             this.lbName_Product.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName_Product.Location = new System.Drawing.Point(379, 51);
+            this.lbName_Product.Location = new System.Drawing.Point(371, 67);
             this.lbName_Product.Name = "lbName_Product";
             this.lbName_Product.Size = new System.Drawing.Size(61, 32);
             this.lbName_Product.TabIndex = 36;
@@ -120,7 +122,7 @@
             // 
             this.lbPrice.BackColor = System.Drawing.Color.Transparent;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(386, 105);
+            this.lbPrice.Location = new System.Drawing.Point(371, 114);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(51, 32);
             this.lbPrice.TabIndex = 37;
@@ -204,19 +206,20 @@
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(617, 18);
+            this.txtPhone.Location = new System.Drawing.Point(617, 3);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(143, 24);
             this.txtPhone.TabIndex = 48;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnlyNumber_KeyPress);
             // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(484, 19);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(484, 3);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(127, 23);
             this.guna2HtmlLabel8.TabIndex = 49;
@@ -444,11 +447,32 @@
             this.PicProduct.TabIndex = 29;
             this.PicProduct.TabStop = false;
             // 
+            // guna2HtmlLabel12
+            // 
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(486, 32);
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(125, 23);
+            this.guna2HtmlLabel12.TabIndex = 61;
+            this.guna2HtmlLabel12.Text = "Tên Khách Hàng: ";
+            // 
+            // lbName_Mem
+            // 
+            this.lbName_Mem.BackColor = System.Drawing.Color.Transparent;
+            this.lbName_Mem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName_Mem.Location = new System.Drawing.Point(617, 33);
+            this.lbName_Mem.Name = "lbName_Mem";
+            this.lbName_Mem.Size = new System.Drawing.Size(3, 2);
+            this.lbName_Mem.TabIndex = 62;
+            // 
             // FrmBuyProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 535);
+            this.Controls.Add(this.lbName_Mem);
+            this.Controls.Add(this.guna2HtmlLabel12);
             this.Controls.Add(this.picBank);
             this.Controls.Add(this.guna2HtmlLabel11);
             this.Controls.Add(this.guna2PictureBox2);
@@ -520,5 +544,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2PictureBox picBank;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbName_Mem;
     }
 }
