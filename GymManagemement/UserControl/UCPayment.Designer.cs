@@ -539,69 +539,69 @@
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(24, 249);
             this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(81, 17);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(72, 17);
             this.guna2HtmlLabel10.TabIndex = 39;
-            this.guna2HtmlLabel10.Text = "Transaction ID";
+            this.guna2HtmlLabel10.Text = "Mã giao dịch";
             // 
             // guna2HtmlLabel11
             // 
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(238, 249);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(211, 249);
             this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(37, 17);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(73, 17);
             this.guna2HtmlLabel11.TabIndex = 40;
-            this.guna2HtmlLabel11.Text = "Phone";
+            this.guna2HtmlLabel11.Text = "Số điện thoại";
             // 
             // guna2HtmlLabel13
             // 
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(407, 249);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(399, 249);
             this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(40, 17);
             this.guna2HtmlLabel13.TabIndex = 41;
-            this.guna2HtmlLabel13.Text = "Amount";
+            this.guna2HtmlLabel13.Text = "Số tiền";
             // 
             // guna2HtmlLabel14
             // 
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(587, 249);
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(554, 249);
             this.guna2HtmlLabel14.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(28, 17);
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(31, 17);
             this.guna2HtmlLabel14.TabIndex = 42;
-            this.guna2HtmlLabel14.Text = "Date";
+            this.guna2HtmlLabel14.Text = "Ngày";
             // 
             // guna2HtmlLabel15
             // 
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(730, 249);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(700, 249);
             this.guna2HtmlLabel15.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(36, 17);
+            this.guna2HtmlLabel15.Size = new System.Drawing.Size(72, 17);
             this.guna2HtmlLabel15.TabIndex = 43;
-            this.guna2HtmlLabel15.Text = "Status";
+            this.guna2HtmlLabel15.Text = "Phương thức";
             // 
             // guna2HtmlLabel16
             // 
             this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(890, 247);
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(879, 247);
             this.guna2HtmlLabel16.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(43, 17);
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(29, 17);
             this.guna2HtmlLabel16.TabIndex = 44;
-            this.guna2HtmlLabel16.Text = "Actions";
+            this.guna2HtmlLabel16.Text = "Khác";
             // 
             // guna2PictureBox1
             // 
