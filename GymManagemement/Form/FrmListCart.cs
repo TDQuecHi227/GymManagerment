@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GymManagemement.Models;
 using GymManagemement.Services;
+using TheArtOfDevHtmlRenderer.Core.Entities;
 
 namespace GymManagemement
 {
@@ -24,6 +25,10 @@ namespace GymManagemement
         }
 
         private void FrmListCart_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        private void LoadData()
         {
             dgvCart.DataSource = null;
             var dataSource = CartManager.CartList.Select(c => new
@@ -42,7 +47,7 @@ namespace GymManagemement
 
         private void Cash_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Cash";
+            paymentMethod = "Tiền mặt";
             plCash.Visible = true;
             picBank.Visible = false;
         }
@@ -80,7 +85,7 @@ namespace GymManagemement
 
         private void Bank_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Bank";
+            paymentMethod = "Chuyển khoản";
             plCash.Visible = false;
             picBank.Visible = true;
         }
@@ -145,5 +150,30 @@ namespace GymManagemement
             CartManager.ClearCart();
             this.Close();
         }
+        private void dgvCart_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hitTestInfo = dgvCart.HitTest(e.X, e.Y);
+                if (hitTestInfo.RowIndex >= 0)
+                {
+                    dgvCart.ClearSelection();
+                    dgvCart.Rows[hitTestInfo.RowIndex].Selected = true;
+                    dgvCart.CurrentCell = dgvCart.Rows[hitTestInfo.RowIndex].Cells[0];
+                }
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if(dgvCart.SelectedRows.Count > 0)
+            {
+                int productId = Convert.ToInt32(dgvCart.SelectedRows[0].Cells["ID_SP"].Value);
+                CartManager.RemoveFromCart(productId);
+                LoadData();
+            }
+        }
+
+
     }
 }
