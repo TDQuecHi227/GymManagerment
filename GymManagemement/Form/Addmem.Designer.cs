@@ -577,6 +577,7 @@
             this.btn_clearname.FillColor = System.Drawing.Color.Transparent;
             this.btn_clearname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_clearname.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_clearname.Image = global::GymManagemement.Properties.Resources.X_fixcolor_1_;
             this.btn_clearname.Location = new System.Drawing.Point(530, 27);
             this.btn_clearname.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clearname.Name = "btn_clearname";

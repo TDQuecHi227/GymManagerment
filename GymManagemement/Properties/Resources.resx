@@ -145,6 +145,9 @@
   <data name="Wallet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Wallet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Shopping Trolley" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Shopping Trolley.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="z6607908416813_cccfd70ca6e18033572f6c608c953ec4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\z6607908416813_cccfd70ca6e18033572f6c608c953ec4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,7 @@
   <data name="membership_fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\membership_fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shopping Trolley" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\Shopping Trolley.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="X_fixcolor(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\X_fixcolor(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
