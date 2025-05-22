@@ -139,14 +139,14 @@ namespace GymManagemement
 
         private void Cash_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Cash";
+            paymentMethod = "Tiền mặt";
             plCash.Visible = true;
             picBank.Visible = false;
         }
 
         private void Bank_CheckedChanged(object sender, EventArgs e)
         {
-            paymentMethod = "Bank";
+            paymentMethod = "Chuyển khoản";
             picBank.Visible = true;
             plCash.Visible = false;
         }
