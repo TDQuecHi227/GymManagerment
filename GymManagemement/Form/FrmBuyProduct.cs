@@ -113,14 +113,26 @@ namespace GymManagemement
                 MessageBox.Show("Tiền trả không đủ.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (string.IsNullOrWhiteSpace(txtQuantity.Text) || txtQuantity.Text == "0")
+            {
+                MessageBox.Show("Vui lòng nhập số lượng sản phẩm.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(paymentMethod))
+            {
+                MessageBox.Show("Vui lòng chọn phương thức thanh toán.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             Product product = new Product();
             product.Id = Convert.ToInt32(lbID.Text);
             product.Name = lbName_Product.Text;
             product.Price = Convert.ToInt32(lbPrice.Text.Replace(" VND", "").Replace(".", ""));
             product.Quantity = Convert.ToInt32(txtQuantity.Text);
             string phone = txtPhone.Text;
+            List<Product> products = new List<Product>();
+            products.Add(product);
             Transaction transaction = new Transaction();
-            if (transaction.transaction_product(product, phone, paymentMethod))
+            if (transaction.transaction_product(products, phone, paymentMethod))
             {
                     ActivityList.activities.Insert(0, new ActivityItem
                     {

@@ -102,10 +102,16 @@ namespace GymManagemement
                 MessageBox.Show("Tiền trả không đủ.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (string.IsNullOrWhiteSpace(paymentMethod))
+            {
+                MessageBox.Show("Vui lòng chọn phương thức thanh toán.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             List<Cart> cartList = CartManager.CartList;
             string phone = txtPhone.Text;
             Transaction transaction = new Transaction();
             bool isSuccess = false;
+            List<Product> products = new List<Product>();
             foreach (var item in cartList)
             {
                 Product product = new Product
@@ -115,8 +121,9 @@ namespace GymManagemement
                     Price = item.Price,
                     Quantity = item.Quantity
                 };
-                isSuccess = transaction.transaction_product(product, phone, paymentMethod);
+                products.Add(product);
             }
+            isSuccess = transaction.transaction_product(products, phone, paymentMethod);
             if (isSuccess)
             {
                 MessageBox.Show("Thanh toán thành công!");

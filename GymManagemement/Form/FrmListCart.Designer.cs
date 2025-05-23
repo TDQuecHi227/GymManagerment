@@ -404,6 +404,7 @@
             this.lbName_Mem.Name = "lbName_Mem";
             this.lbName_Mem.Size = new System.Drawing.Size(3, 2);
             this.lbName_Mem.TabIndex = 75;
+            this.lbName_Mem.Text = null;
             // 
             // FrmListCart
             // 
@@ -414,7 +415,6 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.picBank);
             this.Controls.Add(this.guna2HtmlLabel11);
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.Bank);
@@ -428,6 +428,7 @@
             this.Controls.Add(this.btnESC);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.dgvCart);
+            this.Controls.Add(this.picBank);
             this.Name = "FrmListCart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FrmListCart_Load);

@@ -121,6 +121,9 @@
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="User Groups_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\User Groups_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="calender_fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\calender_fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,9 +151,6 @@
   <data name="Shopping Trolley" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Shopping Trolley.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="z6607908416813_cccfd70ca6e18033572f6c608c953ec4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\z6607908416813_cccfd70ca6e18033572f6c608c953ec4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="phone_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\phone_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +162,9 @@
   </data>
   <data name="Active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Coins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer_fixconer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\trainer_fixconer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,6 +184,9 @@
   <data name="Combo Chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Combo Chart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="X_fixcolor(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\X_fixcolor(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Avt_fixCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Avt_fixCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,8 +199,8 @@
   <data name="Cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Cash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User Groups_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\User Groups_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="z6607908416813_cccfd70ca6e18033572f6c608c953ec4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\z6607908416813_cccfd70ca6e18033572f6c608c953ec4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_fixbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\delete_fixbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +211,7 @@
   <data name="membership_fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\membership_fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="X_fixcolor(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\X_fixcolor(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

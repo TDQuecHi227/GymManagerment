@@ -39,12 +39,12 @@
             // llbMore
             // 
             this.llbMore.AutoSize = true;
-            this.llbMore.Location = new System.Drawing.Point(859, 9);
+            this.llbMore.Location = new System.Drawing.Point(856, 9);
             this.llbMore.Name = "llbMore";
-            this.llbMore.Size = new System.Drawing.Size(39, 13);
+            this.llbMore.Size = new System.Drawing.Size(54, 13);
             this.llbMore.TabIndex = 70;
             this.llbMore.TabStop = true;
-            this.llbMore.Text = "Chi tiết";
+            this.llbMore.Text = "Xem thêm";
             this.llbMore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbMore_LinkClicked);
             // 
             // lb_status

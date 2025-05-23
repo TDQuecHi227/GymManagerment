@@ -282,11 +282,11 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(119, 65);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(87, 65);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(75, 23);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(113, 23);
             this.guna2HtmlLabel6.TabIndex = 48;
-            this.guna2HtmlLabel6.Text = "Tiền thừa: ";
+            this.guna2HtmlLabel6.Text = "Tiền thừa(VND: ";
             // 
             // guna2HtmlLabel5
             // 
@@ -465,6 +465,7 @@
             this.lbName_Mem.Name = "lbName_Mem";
             this.lbName_Mem.Size = new System.Drawing.Size(3, 2);
             this.lbName_Mem.TabIndex = 62;
+            this.lbName_Mem.Text = null;
             // 
             // FrmBuyProduct
             // 

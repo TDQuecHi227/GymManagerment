@@ -105,6 +105,12 @@
     <Compile Include="Form\FrmListCart.Designer.cs">
       <DependentUpon>FrmListCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMorePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMorePayment.Designer.cs">
+      <DependentUpon>FrmMorePayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelControls\UCLoadmember.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,7 @@
       <DependentUpon>NewMemControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductDetailView.cs" />
     <Compile Include="Models\SumAndRatio.cs" />
     <Compile Include="ModelControls\UCMemActive.cs">
       <SubType>UserControl</SubType>
@@ -237,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmListCart.resx">
       <DependentUpon>FrmListCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMorePayment.resx">
+      <DependentUpon>FrmMorePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModelControls\ActivityItemControl.resx">
       <DependentUpon>ActivityItemControl.cs</DependentUpon>
@@ -601,6 +611,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\Shopping Trolley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Bill.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
