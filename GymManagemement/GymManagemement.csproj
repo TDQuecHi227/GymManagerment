@@ -105,10 +105,10 @@
     <Compile Include="Form\FrmListCart.Designer.cs">
       <DependentUpon>FrmListCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMorePayment.cs">
+    <Compile Include="Form\FrmMorePayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMorePayment.Designer.cs">
+    <Compile Include="Form\FrmMorePayment.Designer.cs">
       <DependentUpon>FrmMorePayment.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelControls\UCLoadmember.cs">
@@ -245,7 +245,7 @@
     <EmbeddedResource Include="Form\FrmListCart.resx">
       <DependentUpon>FrmListCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMorePayment.resx">
+    <EmbeddedResource Include="Form\FrmMorePayment.resx">
       <DependentUpon>FrmMorePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModelControls\ActivityItemControl.resx">
