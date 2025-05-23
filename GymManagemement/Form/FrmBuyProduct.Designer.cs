@@ -266,7 +266,7 @@
             this.txtTra.Size = new System.Drawing.Size(120, 22);
             this.txtTra.TabIndex = 51;
             this.txtTra.TextChanged += new System.EventHandler(this.txtTra_TextChanged);
-            this.txtTra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnlyNumber_KeyPress);
+            this.txtTra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnlyNumber_KeyPress_Tra);
             // 
             // lbThua
             // 

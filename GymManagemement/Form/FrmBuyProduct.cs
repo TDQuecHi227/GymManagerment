@@ -202,6 +202,14 @@ namespace GymManagemement
                 e.Handled = true;
             }
         }
+        private void txtOnlyNumber_KeyPress_Tra(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
@@ -211,6 +219,10 @@ namespace GymManagemement
             if (phone.Length == 10)
             {
                 lbName_Mem.Text = load_Member.findMem_Product(phone, ref err);
+            }
+            else if (phone.Length < 10)
+            {
+                lbName_Mem.Text = ""; // Xóa tên khách nếu không còn số điện thoại
             }
         }
     }
