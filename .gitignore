@@ -1,1 +1,3 @@
 .vs/
+# Bỏ toàn bộ thư mục obj (bao gồm cả Debug, Release)
+obj/
