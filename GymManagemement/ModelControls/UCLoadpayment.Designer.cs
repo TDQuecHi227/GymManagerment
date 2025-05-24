@@ -52,7 +52,7 @@
             this.lb_status.BackColor = System.Drawing.Color.Transparent;
             this.lb_status.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_status.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lb_status.Location = new System.Drawing.Point(695, 8);
+            this.lb_status.Location = new System.Drawing.Point(682, 8);
             this.lb_status.Margin = new System.Windows.Forms.Padding(2);
             this.lb_status.Name = "lb_status";
             this.lb_status.Size = new System.Drawing.Size(29, 17);

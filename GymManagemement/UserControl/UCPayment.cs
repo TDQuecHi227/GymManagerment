@@ -18,6 +18,7 @@ namespace GymManagemement
         public UCPayment()
         {
             InitializeComponent();
+            dtpFillDate.Value = DateTime.Now.Date; // Set default date to today
         }
         private void loaddatapayment()
         {    
