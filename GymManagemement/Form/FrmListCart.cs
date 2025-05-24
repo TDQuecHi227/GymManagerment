@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GymManagemement.Activities;
 using GymManagemement.Models;
 using GymManagemement.Service;
 using GymManagemement.Services;
@@ -114,6 +115,11 @@ namespace GymManagemement
             List<Product> products = new List<Product>();
             foreach (var item in cartList)
             {
+                ActivityList.activities.Insert(0, new ActivityItem
+                {
+                    Description = $"{lbName_Mem.Text.Trim()} đã mua {item.Name} ({paymentMethod})",
+                    TimeAgo = DateTime.Now
+                });
                 Product product = new Product
                 {
                     Id = item.ProductId,

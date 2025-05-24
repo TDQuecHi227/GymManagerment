@@ -113,6 +113,16 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calender_icon {
+            get {
+                object obj = ResourceManager.GetObject("calender_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cash {
             get {
                 object obj = ResourceManager.GetObject("Cash", resourceCulture);
@@ -153,6 +163,16 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dumbbell_membership {
+            get {
+                object obj = ResourceManager.GetObject("dumbbell_membership", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dumbell_fixcolor {
             get {
                 object obj = ResourceManager.GetObject("dumbell_fixcolor", resourceCulture);
@@ -183,9 +203,29 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filter_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("filter_fixcolor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gender_icon {
             get {
                 object obj = ResourceManager.GetObject("gender_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap group_icon {
+            get {
+                object obj = ResourceManager.GetObject("group_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +343,16 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Search {
+            get {
+                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Shopping_Cart {
             get {
                 object obj = ResourceManager.GetObject("Shopping Cart", resourceCulture);
@@ -316,6 +366,16 @@ namespace GymManagemement.Properties {
         internal static System.Drawing.Bitmap Shopping_Trolley {
             get {
                 object obj = ResourceManager.GetObject("Shopping Trolley", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tag_png {
+            get {
+                object obj = ResourceManager.GetObject("tag_png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

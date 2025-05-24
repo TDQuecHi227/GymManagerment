@@ -111,10 +111,7 @@ namespace GymManagemement
                         LoadUserControl(new UCPayment());
                         break;
                     case "btnPackage":
-                        // Open Settings form
-                        break;
-                    case "btnClass":
-                        // Open Settings form
+                        LoadUserControl(new UCMemberships());
                         break;
                     case "btnLogOut":
                         this.Hide();

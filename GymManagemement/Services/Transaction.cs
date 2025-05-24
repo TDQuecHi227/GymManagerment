@@ -64,6 +64,7 @@ namespace GymManagemement.Services
             // 3. Thực hiện transaction
             return conn.ExecuteTransaction(commands, ref err);
         }
+      
 
     }
     

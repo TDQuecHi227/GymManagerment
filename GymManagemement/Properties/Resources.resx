@@ -169,8 +169,14 @@
   <data name="trainer_fixconer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\trainer_fixconer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="calender_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\calender_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Personal Trainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Personal Trainer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\group_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Available Updates" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Available Updates.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +186,12 @@
   </data>
   <data name="Expired" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Expired.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dumbbell_membership" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\dumbbell_membership.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Combo Chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Combo Chart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,6 +205,9 @@
   <data name="edit_fixconer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\edit_fixconer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="membership_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\membership_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,13 +220,16 @@
   <data name="delete_fixbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\delete_fixbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tag_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\tag_png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Shopping Cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Shopping Cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="membership_fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\membership_fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\Bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="filter_fixcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\filter_fixcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

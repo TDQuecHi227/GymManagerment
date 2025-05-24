@@ -62,13 +62,8 @@ namespace GymManagemement
         }
         private void LoadDataNewMember()
         {
-            List<NewMember> members = new List<NewMember>
-            {
-                new NewMember { Name = "Nguyễn Văn D", RegisteredAt = "10 phút trước" },
-                new NewMember { Name = "Phạm Thị E", RegisteredAt = "3 giờ trước" },
-                new NewMember { Name = "Lê Văn F", RegisteredAt = "5 giờ trước" }
-            };
-            foreach (var mem in members)
+            flpNewMembers.Controls.Clear();
+            foreach (var mem in NewMemberList.newMembers)
             {
                 var memCtrl = new NewMemControl();
                 memCtrl.SetData(mem);

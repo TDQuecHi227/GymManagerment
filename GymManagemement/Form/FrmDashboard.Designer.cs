@@ -33,7 +33,6 @@
             this.plTaskBar = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnSP = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnClass = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnPay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnPackage = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTrainer = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -52,7 +51,6 @@
             this.plTaskBar.BorderRadius = 20;
             this.plTaskBar.Controls.Add(this.btnSP);
             this.plTaskBar.Controls.Add(this.btnLogOut);
-            this.plTaskBar.Controls.Add(this.btnClass);
             this.plTaskBar.Controls.Add(this.btnPay);
             this.plTaskBar.Controls.Add(this.btnPackage);
             this.plTaskBar.Controls.Add(this.btnTrainer);
@@ -79,7 +77,7 @@
             this.btnSP.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSP.ImageRotate = 0F;
             this.btnSP.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSP.Location = new System.Drawing.Point(15, 495);
+            this.btnSP.Location = new System.Drawing.Point(15, 445);
             this.btnSP.Name = "btnSP";
             this.btnSP.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnSP.PressedState.ImageSize = new System.Drawing.Size(25, 25);
@@ -107,38 +105,19 @@
             this.guna2HtmlToolTip1.SetToolTip(this.btnLogOut, "Thoát");
             this.btnLogOut.Click += new System.EventHandler(this.GunaButton_Click);
             // 
-            // btnClass
-            // 
-            this.btnClass.BackColor = System.Drawing.Color.Transparent;
-            this.btnClass.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnClass.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            this.btnClass.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClass.Image = ((System.Drawing.Image)(resources.GetObject("btnClass.Image")));
-            this.btnClass.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnClass.ImageRotate = 0F;
-            this.btnClass.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClass.Location = new System.Drawing.Point(15, 439);
-            this.btnClass.Name = "btnClass";
-            this.btnClass.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            this.btnClass.PressedState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnClass.Size = new System.Drawing.Size(37, 40);
-            this.btnClass.TabIndex = 5;
-            this.guna2HtmlToolTip1.SetToolTip(this.btnClass, "Lớp tập");
-            this.btnClass.Click += new System.EventHandler(this.GunaButton_Click);
-            // 
             // btnPay
             // 
             this.btnPay.BackColor = System.Drawing.Color.Transparent;
             this.btnPay.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnPay.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.btnPay.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnPay.HoverState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
             this.btnPay.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnPay.ImageRotate = 0F;
             this.btnPay.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPay.Location = new System.Drawing.Point(15, 327);
+            this.btnPay.Location = new System.Drawing.Point(15, 331);
             this.btnPay.Name = "btnPay";
-            this.btnPay.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btnPay.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnPay.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnPay.Size = new System.Drawing.Size(37, 40);
             this.btnPay.TabIndex = 5;
@@ -149,15 +128,15 @@
             // 
             this.btnPackage.BackColor = System.Drawing.Color.Transparent;
             this.btnPackage.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnPackage.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btnPackage.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btnPackage.HoverState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnPackage.Image = ((System.Drawing.Image)(resources.GetObject("btnPackage.Image")));
             this.btnPackage.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnPackage.ImageRotate = 0F;
             this.btnPackage.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPackage.Location = new System.Drawing.Point(15, 383);
+            this.btnPackage.Location = new System.Drawing.Point(15, 388);
             this.btnPackage.Name = "btnPackage";
-            this.btnPackage.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            this.btnPackage.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
             this.btnPackage.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnPackage.Size = new System.Drawing.Size(37, 40);
             this.btnPackage.TabIndex = 4;
@@ -168,15 +147,15 @@
             // 
             this.btnTrainer.BackColor = System.Drawing.Color.Transparent;
             this.btnTrainer.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnTrainer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
+            this.btnTrainer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             this.btnTrainer.HoverState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnTrainer.Image = ((System.Drawing.Image)(resources.GetObject("btnTrainer.Image")));
             this.btnTrainer.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTrainer.ImageRotate = 0F;
             this.btnTrainer.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnTrainer.Location = new System.Drawing.Point(15, 271);
+            this.btnTrainer.Location = new System.Drawing.Point(15, 274);
             this.btnTrainer.Name = "btnTrainer";
-            this.btnTrainer.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
+            this.btnTrainer.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
             this.btnTrainer.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnTrainer.Size = new System.Drawing.Size(37, 40);
             this.btnTrainer.TabIndex = 4;
@@ -187,15 +166,15 @@
             // 
             this.btnMember.BackColor = System.Drawing.Color.Transparent;
             this.btnMember.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMember.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image12")));
+            this.btnMember.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
             this.btnMember.HoverState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnMember.Image = ((System.Drawing.Image)(resources.GetObject("btnMember.Image")));
             this.btnMember.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnMember.ImageRotate = 0F;
             this.btnMember.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnMember.Location = new System.Drawing.Point(15, 215);
+            this.btnMember.Location = new System.Drawing.Point(15, 217);
             this.btnMember.Name = "btnMember";
-            this.btnMember.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image13")));
+            this.btnMember.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
             this.btnMember.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnMember.Size = new System.Drawing.Size(37, 40);
             this.btnMember.TabIndex = 3;
@@ -206,15 +185,15 @@
             // 
             this.btnSchedule.BackColor = System.Drawing.Color.Transparent;
             this.btnSchedule.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSchedule.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image14")));
+            this.btnSchedule.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image12")));
             this.btnSchedule.HoverState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSchedule.Image = ((System.Drawing.Image)(resources.GetObject("btnSchedule.Image")));
             this.btnSchedule.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSchedule.ImageRotate = 0F;
             this.btnSchedule.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSchedule.Location = new System.Drawing.Point(15, 159);
+            this.btnSchedule.Location = new System.Drawing.Point(15, 160);
             this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image15")));
+            this.btnSchedule.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image13")));
             this.btnSchedule.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSchedule.Size = new System.Drawing.Size(37, 40);
             this.btnSchedule.TabIndex = 2;
@@ -301,7 +280,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnTrainer;
         private Guna.UI2.WinForms.Guna2ImageButton btnMember;
         private Guna.UI2.WinForms.Guna2ImageButton btnLogOut;
-        private Guna.UI2.WinForms.Guna2ImageButton btnClass;
         private Guna.UI2.WinForms.Guna2ImageButton btnPackage;
         private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;

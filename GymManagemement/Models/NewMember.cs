@@ -9,6 +9,6 @@ namespace GymManagemement.NewMembers
     public class NewMember
     {
         public string Name { get; set; }
-        public string RegisteredAt { get; set; }
+        public DateTime RegisteredAt { get; set; }
     }
 }

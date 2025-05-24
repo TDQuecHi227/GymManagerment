@@ -16,10 +16,24 @@ namespace GymManagemement.NewMembers
         {
             InitializeComponent();
         }
+        public static string FormatTimeAgo(DateTime time)
+        {
+            TimeSpan diff = DateTime.Now - time;
+
+            if (diff.TotalSeconds < 60)
+                return $"{(int)diff.TotalSeconds} giây trước";
+            if (diff.TotalMinutes < 60)
+                return $"{(int)diff.TotalMinutes} phút trước";
+            if (diff.TotalHours < 24)
+                return $"{(int)diff.TotalHours} giờ trước";
+            if (diff.TotalDays < 2)
+                return "Hôm qua";
+            return $"{(int)diff.TotalDays} ngày trước";
+        }
         public void SetData(NewMember data)
         {
             lbName.Text = data.Name;
-            lbTime.Text = data.RegisteredAt;
+            lbTime.Text = FormatTimeAgo(data.RegisteredAt);
             
         }
     }

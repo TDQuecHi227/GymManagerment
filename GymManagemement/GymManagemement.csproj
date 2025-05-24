@@ -75,6 +75,12 @@
     <Compile Include="Form\Addmem.Designer.cs">
       <DependentUpon>Addmem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Addmembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Addmembership.Designer.cs">
+      <DependentUpon>Addmembership.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FrmAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,10 +123,18 @@
     <Compile Include="ModelControls\UCLoadmember.Designer.cs">
       <DependentUpon>UCLoadmember.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelControls\UCLoadmembership.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\UCLoadmembership.Designer.cs">
+      <DependentUpon>UCLoadmembership.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ActivityList.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartManager.cs" />
     <Compile Include="Models\Loadmember.cs" />
+    <Compile Include="Models\Loadmembership.cs" />
+    <Compile Include="Models\NewMemberList.cs" />
     <Compile Include="Models\payment.cs" />
     <Compile Include="ModelControls\Add_Product.cs">
       <SubType>UserControl</SubType>
@@ -172,6 +186,7 @@
     </Compile>
     <Compile Include="Services\Load_Activity_Home.cs" />
     <Compile Include="Services\Load_Member.cs" />
+    <Compile Include="Services\Load_Membership.cs" />
     <Compile Include="Services\Load_Member_Home.cs" />
     <Compile Include="Services\Load_payment.cs" />
     <Compile Include="Services\Load_Product.cs" />
@@ -188,6 +203,12 @@
     </Compile>
     <Compile Include="UserControl\UCMember.Designer.cs">
       <DependentUpon>UCMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCMemberships.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCMemberships.Designer.cs">
+      <DependentUpon>UCMemberships.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UCPayment.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +251,9 @@
     <EmbeddedResource Include="Form\Addmem.resx">
       <DependentUpon>Addmem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Addmembership.resx">
+      <DependentUpon>Addmembership.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmAddProduct.resx">
       <DependentUpon>FrmAddProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +287,9 @@
     <EmbeddedResource Include="ModelControls\UCLoadmember.resx">
       <DependentUpon>UCLoadmember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\UCLoadmembership.resx">
+      <DependentUpon>UCLoadmembership.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModelControls\UCMemActive.resx">
       <DependentUpon>UCMemActive.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCMember.resx">
       <DependentUpon>UCMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCMemberships.resx">
+      <DependentUpon>UCMemberships.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCPayment.resx">
       <DependentUpon>UCPayment.cs</DependentUpon>
@@ -617,6 +647,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\Bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\dumbbell_membership.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,35 +10,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GymManagemement.Service;
 
+
 namespace GymManagemement
 {
     public partial class UCLoadmember : UserControl
     {
+        public event Action MemberUpdated;
+        public Loadmember currentMemberData { get; set; }
         public UCLoadmember()
         {
             InitializeComponent();
         }
-        private void LoadDataMember()
-        {
-            Load_Member member = new Load_Member();
-            List<Loadmember> members = member.Getmember();
-            //flp_member.Controls.Clear();
-            try
-            {
-                foreach (var item in members)
-                {
-                    var ctrl = new UCLoadmember();
-                    ctrl.Setdata(item);
-                    //flp_member.Controls.Add(ctrl);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
         public void Setdata(Loadmember data)
         {
+            currentMemberData = data; // Lưu dữ liệu thành viên hiện tại
             lb_ID.Text = data.Id;
             lb_FULLNAME.Text = data.FullName;
             lb_PHONE.Text = data.Phone;
@@ -50,7 +36,6 @@ namespace GymManagemement
             lb_TRAININGTYPE.Text = data.TrainingType;
             lb_TRAINER.Text = data.Trainer;
         }
-
         private void UCLoadmember_MouseLeave(object sender, EventArgs e)
         {
             if (!this.ClientRectangle.Contains(this.PointToClient(Cursor.Position)))
@@ -89,6 +74,37 @@ namespace GymManagemement
                 else
                 {
                     MessageBox.Show("Lỗi: " + err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            editmem();
+            
+        }
+        private void editmem()
+        {
+            var updateForm = new Addmem(currentMemberData);
+
+            if (updateForm.ShowDialog() == DialogResult.OK)
+            {
+                // Lấy dữ liệu đã update
+                var updated = updateForm.CurrentMemberData;
+
+                // Cập nhật DB
+                var service = new Load_Member();
+                string err = null;
+                if (service.UpdateMember(updated, ref err))
+                {
+                    // Cập nhật UI ngay trên control này
+                    Setdata(updated);
+                    MemberUpdated?.Invoke(); // Gọi sự kiện cập nhật thành viên
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi khi cập nhật: " + err, "Lỗi",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
