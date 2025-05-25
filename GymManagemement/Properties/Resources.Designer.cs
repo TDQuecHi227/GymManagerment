@@ -263,6 +263,16 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_app_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Icon_app-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap idcard_fixconer {
             get {
                 object obj = ResourceManager.GetObject("idcard_fixconer", resourceCulture);

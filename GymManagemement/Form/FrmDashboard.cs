@@ -13,8 +13,6 @@ namespace GymManagemement
 {  
     public partial class FrmDashboard : Form
     {
-        private UCNotification uCNotification;
-        private Timer autoCloseTimer;
         public FrmDashboard()
         {
             InitializeComponent();
@@ -77,24 +75,7 @@ namespace GymManagemement
             {
                 // Perform action based on the button clicked
                 switch (button.Name)
-                {
-                    case "btnNotifi":
-                        if (uCNotification == null || uCNotification.IsDisposed)
-                        {
-                            uCNotification = new UCNotification();
-                            Point location = btnNotifi.PointToScreen(Point.Empty);
-                            location = this.PointToClient(location);
-                            uCNotification.Location = new Point(location.X + btnNotifi.Width + 15, location.Y + btnNotifi.Height - 50);
-                            this.Controls.Add(uCNotification);
-                            uCNotification.BringToFront();
-                        }
-                        else
-                        {
-                            this.Controls.Remove(uCNotification);
-                            uCNotification.Dispose();
-                            uCNotification = null;
-                        }
-                        break;
+                {                    
                     case "btnHome":
                         HomeFunction();
                         break;

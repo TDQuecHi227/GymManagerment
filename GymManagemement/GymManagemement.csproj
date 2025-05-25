@@ -218,12 +218,6 @@
     <Compile Include="UserControl\UCPayment.Designer.cs">
       <DependentUpon>UCPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\UCNotification.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\UCNotification.Designer.cs">
-      <DependentUpon>UCNotification.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\UCProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -309,9 +303,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCPayment.resx">
       <DependentUpon>UCPayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\UCNotification.resx">
-      <DependentUpon>UCNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCProduct.resx">
       <DependentUpon>UCProduct.cs</DependentUpon>
@@ -658,6 +649,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\Eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Icon_app-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

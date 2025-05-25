@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboard));
             this.plTaskBar = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSP = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnPay = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -39,16 +39,16 @@
             this.btnMember = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnSchedule = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnNotifi = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.plHome = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.plTaskBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // plTaskBar
             // 
             this.plTaskBar.BorderRadius = 20;
+            this.plTaskBar.Controls.Add(this.guna2PictureBox1);
             this.plTaskBar.Controls.Add(this.btnSP);
             this.plTaskBar.Controls.Add(this.btnLogOut);
             this.plTaskBar.Controls.Add(this.btnPay);
@@ -57,7 +57,6 @@
             this.plTaskBar.Controls.Add(this.btnMember);
             this.plTaskBar.Controls.Add(this.btnSchedule);
             this.plTaskBar.Controls.Add(this.btnHome);
-            this.plTaskBar.Controls.Add(this.btnNotifi);
             this.plTaskBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(153)))), ((int)(((byte)(181)))));
             this.plTaskBar.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(171)))), ((int)(((byte)(199)))));
             this.plTaskBar.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(186)))), ((int)(((byte)(212)))));
@@ -66,6 +65,19 @@
             this.plTaskBar.Name = "plTaskBar";
             this.plTaskBar.Size = new System.Drawing.Size(70, 680);
             this.plTaskBar.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(10, 22);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 8;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // btnSP
             // 
@@ -219,25 +231,6 @@
             this.guna2HtmlToolTip1.SetToolTip(this.btnHome, "Trang chủ");
             this.btnHome.Click += new System.EventHandler(this.GunaButton_Click);
             // 
-            // btnNotifi
-            // 
-            this.btnNotifi.BackColor = System.Drawing.Color.Transparent;
-            this.btnNotifi.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnNotifi.HoverState.Image = global::GymManagemement.Properties.Resources.Notification_click;
-            this.btnNotifi.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNotifi.Image = global::GymManagemement.Properties.Resources.Notification;
-            this.btnNotifi.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnNotifi.ImageRotate = 0F;
-            this.btnNotifi.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNotifi.Location = new System.Drawing.Point(15, 23);
-            this.btnNotifi.Name = "btnNotifi";
-            this.btnNotifi.PressedState.Image = global::GymManagemement.Properties.Resources.Notification_click;
-            this.btnNotifi.PressedState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNotifi.Size = new System.Drawing.Size(37, 40);
-            this.btnNotifi.TabIndex = 0;
-            this.guna2HtmlToolTip1.SetToolTip(this.btnNotifi, "Thông báo");
-            this.btnNotifi.Click += new System.EventHandler(this.GunaButton_Click);
-            // 
             // guna2HtmlToolTip1
             // 
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
@@ -267,6 +260,7 @@
             this.Text = "FrmDashboard";
             this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.plTaskBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,7 +268,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel plTaskBar;
-        private Guna.UI2.WinForms.Guna2ImageButton btnNotifi;
         private Guna.UI2.WinForms.Guna2ImageButton btnSchedule;
         private Guna.UI2.WinForms.Guna2ImageButton btnHome;
         private Guna.UI2.WinForms.Guna2ImageButton btnPay;
@@ -283,8 +276,8 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnLogOut;
         private Guna.UI2.WinForms.Guna2ImageButton btnPackage;
         private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel plHome;
         private Guna.UI2.WinForms.Guna2ImageButton btnSP;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
