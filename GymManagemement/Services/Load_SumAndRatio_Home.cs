@@ -126,47 +126,47 @@ namespace GymManagemement.Services
         //    }
         //    return "Không có dữ liệu";
         //}
-        //public string GetRatioRevenue()
-        //{
-        //    string query = "WITH MonthlyRevenue AS (" +
-        //        "SELECT " +
-        //        "   FORMAT(transaction_date, 'yyyy-MM') AS Month," +
-        //        "   SUM(total_amount) AS TotalRevenue " +
-        //        "FROM transactions " +
-        //        "GROUP BY FORMAT(transaction_date, 'yyyy-MM')), " +
-        //        "TopTwoMonths AS (" +
-        //        "SELECT TOP 2 *" +
-        //        "FROM MonthlyRevenue " +
-        //        "ORDER BY Month DESC) " +
-        //        "SELECT " +
-        //        "   MAX(CASE WHEN rn = 1 THEN Month END) AS CurrentMonth, " +
-        //        "   MAX(CASE WHEN rn = 1 THEN TotalRevenue END) AS CurrentCount, " +
-        //        "   MAX(CASE WHEN rn = 2 THEN TotalRevenue END) AS PrevCount, " +
-        //        "   CASE " +
-        //        "       WHEN MAX(CASE WHEN rn = 2 THEN TotalRevenue END) IS NULL THEN NULL " +
-        //        "       WHEN MAX(CASE WHEN rn = 2 THEN TotalRevenue END) = 0 THEN NULL " +
-        //        "       ELSE ROUND(" +
-        //        "               (MAX(CASE WHEN rn = 1 THEN TotalRevenue END) - " +
-        //        "               MAX(CASE WHEN rn = 2 THEN TotalRevenue END)) * 100.0 / " +
-        //        "               MAX(CASE WHEN rn = 2 THEN TotalRevenue END), 2) " +
-        //        "   END AS GrowthRatePercent " +
-        //        "FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY Month DESC) AS rn FROM MonthlyRevenue) AS Ranked;";
-        //    var ds = conn.ExecuteQueryData(query, CommandType.Text);
-        //    if (ds.Tables[0].Rows.Count > 0)
-        //    {
-        //        var row = ds.Tables[0].Rows[0];
-        //        int prevCount = Convert.ToInt32(row["PrevCount"]);
-        //        double growthRatePercent = Convert.ToDouble(row["GrowthRatePercent"]);
-        //        if (growthRatePercent > 0)
-        //        {
-        //            return "↑" + growthRatePercent.ToString("0.00") + "% so với tháng trước";
-        //        }
-        //        else if (growthRatePercent < 0)
-        //        {
-        //            return "↓" + Math.Abs(growthRatePercent).ToString("0.00") + "% so với tháng trước";
-        //        }
-        //    }
-        //    return "Không có dữ liệu";
-        //}
+        public string GetRatioRevenue()
+        {
+            string query = "WITH MonthlyRevenue AS (" +
+                "SELECT " +
+                "   FORMAT(transaction_date, 'yyyy-MM') AS Month," +
+                "   SUM(total_amount) AS TotalRevenue " +
+                "FROM transactions " +
+                "GROUP BY FORMAT(transaction_date, 'yyyy-MM')), " +
+                "TopTwoMonths AS (" +
+                "SELECT TOP 2 *" +
+                "FROM MonthlyRevenue " +
+                "ORDER BY Month DESC) " +
+                "SELECT " +
+                "   MAX(CASE WHEN rn = 1 THEN Month END) AS CurrentMonth, " +
+                "   MAX(CASE WHEN rn = 1 THEN TotalRevenue END) AS CurrentCount, " +
+                "   MAX(CASE WHEN rn = 2 THEN TotalRevenue END) AS PrevCount, " +
+                "   CASE " +
+                "       WHEN MAX(CASE WHEN rn = 2 THEN TotalRevenue END) IS NULL THEN NULL " +
+                "       WHEN MAX(CASE WHEN rn = 2 THEN TotalRevenue END) = 0 THEN NULL " +
+                "       ELSE ROUND(" +
+                "               (MAX(CASE WHEN rn = 1 THEN TotalRevenue END) - " +
+                "               MAX(CASE WHEN rn = 2 THEN TotalRevenue END)) * 100.0 / " +
+                "               MAX(CASE WHEN rn = 2 THEN TotalRevenue END), 2) " +
+                "   END AS GrowthRatePercent " +
+                "FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY Month DESC) AS rn FROM MonthlyRevenue) AS Ranked;";
+            var ds = conn.ExecuteQueryData(query, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var row = ds.Tables[0].Rows[0];
+                int prevCount = Convert.ToInt32(row["PrevCount"]);
+                double growthRatePercent = Convert.ToDouble(row["GrowthRatePercent"]);
+                if (growthRatePercent > 0)
+                {
+                    return "↑" + growthRatePercent.ToString("0.00") + "% so với tháng trước";
+                }
+                else if (growthRatePercent < 0)
+                {
+                    return "↓" + Math.Abs(growthRatePercent).ToString("0.00") + "% so với tháng trước";
+                }
+            }
+            return "Không có dữ liệu";
+        }
     }
 }

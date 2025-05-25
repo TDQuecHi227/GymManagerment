@@ -19,6 +19,8 @@ namespace GymManagemement
     public partial class UCHome : UserControl
     {
         public event EventHandler MoreClicked;
+        public readonly Chart_Provider chart = new Chart_Provider();
+
         public UCHome()
         {
             InitializeComponent();
@@ -106,7 +108,7 @@ namespace GymManagemement
             lbTotalRevenue.Text = sumAndRatioRepository.GetTotalRevenue().ToString("N0") + " VND";
             string ratiomember = sumAndRatioRepository.GetRatioMembers();
             //string ratiotrainer = sumAndRatioRepository.GetRatioTrainers();
-            //string ratiorevenue = sumAndRatioRepository.GetRatioRevenue();
+            string ratiorevenue = sumAndRatioRepository.GetRatioRevenue();
             lbRatioMem.Text = ratiomember;
             if(ratiomember.Contains("↑"))
             {
@@ -133,51 +135,45 @@ namespace GymManagemement
             //{
             //    lbRatioTrainer.ForeColor = Color.Gray;
             //}
-            //lbRatioRevenue.Text = ratiorevenue;
-            //if (ratiorevenue.Contains("↑"))
-            //{
-            //    lbRatioRevenue.ForeColor = Color.Green;
-            //}
-            //else if (ratiorevenue.Contains("↓"))
-            //{
-            //    lbRatioRevenue.ForeColor = Color.Red;
-            //}
-            //else
-            //{
-            //    lbRatioRevenue.ForeColor = Color.Gray;
-            //}
+            lbRatioRevenue.Text = ratiorevenue;
+            if (ratiorevenue.Contains("↑"))
+            {
+                lbRatioRevenue.ForeColor = Color.Green;
+            }
+            else if (ratiorevenue.Contains("↓"))
+            {
+                lbRatioRevenue.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbRatioRevenue.ForeColor = Color.Gray;
+            }
         }
         private void UpdateChart_Monthly()
         {
             Doanhthu.Series[0].Points.Clear();
-
-            string[] months = { "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6",
-                        "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12" };
-            int[] values = { 5, 10, 3, 8, 2, 6, 4, 9, 7, 11, 5, 6 };
-
-            for (int i = 0; i < months.Length; i++)
+            var data = chart.GetMonthlyRevenueData();
+            foreach (var item in data)
             {
-                Doanhthu.Series[0].Points.AddXY(months[i], values[i]);
+                Doanhthu.Series[0].Points.AddXY(item.Label, item.Value);
             }
         }
         private void UpdateChart_Yearly()
         {
             Doanhthu.Series[0].Points.Clear(); // Xóa dữ liệu cũ
-            string[] years = { "2020", "2021", "2022", "2023" };
-            int[] values = { 100, 200, 150, 300 };
-            for (int i = 0; i < years.Length; i++)
+            var data = chart.GetYearlyRevenueData();
+            foreach (var item in data)
             {
-                Doanhthu.Series[0].Points.AddXY(years[i], values[i]);
+                Doanhthu.Series[0].Points.AddXY(item.Label, item.Value);
             }
         }
         private void UpdateChart_Dayly()
         {
             Doanhthu.Series[0].Points.Clear(); // Xóa dữ liệu cũ
-            string[] days = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
-            int[] values = { 20, 30, 25, 40, 35, 50, 45 };
-            for (int i = 0; i < days.Length; i++)
+            var data = chart.GetDailyRevenueData();
+            foreach (var item in data)
             {
-                Doanhthu.Series[0].Points.AddXY(days[i], values[i]);
+                Doanhthu.Series[0].Points.AddXY(item.Label, item.Value);
             }
         }      
         

@@ -257,6 +257,9 @@
             // 
             // Doanhthu
             // 
+            this.Doanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Doanhthu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(171)))), ((int)(((byte)(199)))));
             this.Doanhthu.BorderlineWidth = 5;
             this.Doanhthu.CausesValidation = false;
@@ -278,7 +281,7 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.Doanhthu.Legends.Add(legend1);
-            this.Doanhthu.Location = new System.Drawing.Point(21, 57);
+            this.Doanhthu.Location = new System.Drawing.Point(21, 45);
             this.Doanhthu.Name = "Doanhthu";
             this.Doanhthu.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.BorderWidth = 3;
@@ -289,7 +292,7 @@
             series1.Name = "Monthly";
             series1.XValueMember = "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec";
             this.Doanhthu.Series.Add(series1);
-            this.Doanhthu.Size = new System.Drawing.Size(641, 300);
+            this.Doanhthu.Size = new System.Drawing.Size(641, 312);
             this.Doanhthu.TabIndex = 2;
             // 
             // guna2ComboBox1
@@ -309,10 +312,11 @@
             "Ngày",
             "Tháng",
             "Năm"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(514, 15);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(570, 3);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
             this.guna2ComboBox1.TabIndex = 1;
+            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // guna2HtmlLabel1
@@ -320,7 +324,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(171)))), ((int)(((byte)(199)))));
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 15);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(137, 23);
             this.guna2HtmlLabel1.TabIndex = 0;

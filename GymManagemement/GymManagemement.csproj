@@ -185,6 +185,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\Chart_Provider.cs" />
     <Compile Include="Services\Load_Activity_Home.cs" />
     <Compile Include="Services\Load_Member.cs" />
     <Compile Include="Services\Load_Membership.cs" />

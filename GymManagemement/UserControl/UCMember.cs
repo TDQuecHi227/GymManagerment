@@ -151,7 +151,28 @@ namespace GymManagemement
                 MessageBox.Show("Lỗi khi load dữ liệu lên cb_mbstype: " + e.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ApplyFilters()
+        {
+            string selectedMbsType = cb_mbstype.Text;
+            string selectedTrainType = cb_traintype.Text;
+            string selectedTrainer = cb_trainer.Text;
 
+            foreach (Control ctrl in flp_member.Controls)
+            {
+                if (ctrl is UCLoadmember member)
+                {
+                    string mbsType = member.currentMemberData?.Membership ?? "";
+                    string trainType = member.currentMemberData?.TrainingType ?? "";
+                    string trainer = member.currentMemberData?.Trainer ?? "";
+
+                    bool matchMbs = (cb_mbstype.SelectedIndex == 0 || mbsType.Contains(selectedMbsType));
+                    bool matchTrain = (cb_traintype.SelectedIndex == 0 || trainType.Contains(selectedTrainType));
+                    bool matchTrainer = (cb_trainer.SelectedIndex == 0 || trainer.Contains(selectedTrainer));
+
+                    member.Visible = matchMbs && matchTrain && matchTrainer;
+                }
+            }
+        }
         private void tb_search_TextChanged(object sender, EventArgs e)
         {
             string keyword = tb_search.Text.Trim().ToLower();
@@ -168,44 +189,17 @@ namespace GymManagemement
         }
         private void cb_mbstype_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedValue = cb_mbstype.Text;
-            foreach (Control ctrl in flp_member.Controls)
-            {
-                if (ctrl is UCLoadmember searchbyMbstype)
-                {
-                    string mbstype = searchbyMbstype.currentMemberData?.Membership ?? "";
-                    if(cb_mbstype.SelectedIndex == 0) searchbyMbstype.Visible = true;
-                    else searchbyMbstype.Visible = mbstype.Contains(selectedValue);
-                }
-            }
+            ApplyFilters();
         }
 
         private void cb_traintype_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedTrainType = cb_traintype.Text;
-            foreach (Control ctrl in flp_member.Controls)
-            {
-                if(ctrl is UCLoadmember searchbyTraintype)
-                {
-                    string traintype = searchbyTraintype.currentMemberData?.TrainingType ?? "";
-                    if(cb_traintype.SelectedIndex == 0) searchbyTraintype.Visible = true;
-                    else searchbyTraintype.Visible = traintype.Contains(selectedTrainType);
-                }
-            }
+            ApplyFilters();
         }
 
         private void cb_trainer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedTrainer = cb_trainer.Text;
-            foreach (Control ctrl in flp_member.Controls)
-            {
-                if(ctrl is UCLoadmember searchbyTrainer)
-                {
-                    string trainer = searchbyTrainer.currentMemberData?.Trainer ?? "";
-                    if(cb_trainer.SelectedIndex == 0) searchbyTrainer.Visible = true;
-                    else searchbyTrainer.Visible= trainer.Contains(selectedTrainer);
-                }
-            }
+            ApplyFilters();
         }
     }
 }
