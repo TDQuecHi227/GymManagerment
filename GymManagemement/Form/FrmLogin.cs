@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GymManagemement.Models;
+using GymManagemement.Services;
 
 
 namespace GymManagemement
@@ -39,7 +41,7 @@ namespace GymManagemement
         {
             BoGocPanel(this.plLogin, 20);
             this.plLogin.BackColor = Color.FromArgb(200, 255, 255, 255);
-            this.txtLogin.BackColor = Color.FromArgb(0, 255, 255, 255);
+            this.txtUser.BackColor = Color.FromArgb(0, 255, 255, 255);
             this.txtPass.BackColor = Color.FromArgb(0, 255, 255, 255);
             this.picLogin.BackColor = Color.FromArgb(0, 255, 255, 255);
             this.picPass.BackColor = Color.FromArgb(0, 255, 255, 255);
@@ -52,11 +54,35 @@ namespace GymManagemement
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
+        {   
+            User user = new Load_User().GetUser();
+            if (txtUser.Text.Trim() == user.UserName & txtPass.Text.Trim() == user.Password)
+            {
+                this.Hide();
+                FrmDashboard main = new FrmDashboard();
+                main.FormClosed += (s, args) => this.Close();
+                main.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUser.Focus();
+            }
+
+        }
+
+        private void Visible_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmDashboard main = new FrmDashboard();
-            main.FormClosed += (s, args) => this.Close();
-            main.Show();
+            txtPass.PasswordChar = '\0';
+            Visible.Visible = false;
+            Invisible.Visible = true;
+        }
+
+        private void Invisible_Click(object sender, EventArgs e)
+        {
+            txtPass.PasswordChar = '*';
+            Visible.Visible = true;
+            Invisible.Visible = false;
         }
     }
 }

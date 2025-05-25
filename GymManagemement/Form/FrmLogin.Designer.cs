@@ -33,11 +33,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.plLogin = new System.Windows.Forms.Panel();
+            this.Visible = new Guna.UI2.WinForms.Guna2Button();
+            this.Invisible = new Guna.UI2.WinForms.Guna2Button();
             this.picPass = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.picLogin = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtLogin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbLogin = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.plBorderStyle.SuspendLayout();
@@ -88,17 +90,59 @@
             // plLogin
             // 
             this.plLogin.BackColor = System.Drawing.Color.Transparent;
+            this.plLogin.Controls.Add(this.Visible);
+            this.plLogin.Controls.Add(this.Invisible);
             this.plLogin.Controls.Add(this.picPass);
             this.plLogin.Controls.Add(this.picLogin);
             this.plLogin.Controls.Add(this.btnLogin);
             this.plLogin.Controls.Add(this.txtPass);
-            this.plLogin.Controls.Add(this.txtLogin);
+            this.plLogin.Controls.Add(this.txtUser);
             this.plLogin.Controls.Add(this.lbLogin);
             this.plLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plLogin.Location = new System.Drawing.Point(375, 74);
             this.plLogin.Name = "plLogin";
             this.plLogin.Size = new System.Drawing.Size(300, 350);
             this.plLogin.TabIndex = 1;
+            // 
+            // Visible
+            // 
+            this.Visible.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Visible.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Visible.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Visible.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Visible.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Visible.FillColor = System.Drawing.Color.White;
+            this.Visible.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Visible.ForeColor = System.Drawing.Color.White;
+            this.Visible.HoverState.FillColor = System.Drawing.Color.White;
+            this.Visible.Image = global::GymManagemement.Properties.Resources.Eye;
+            this.Visible.ImageSize = new System.Drawing.Size(22, 22);
+            this.Visible.Location = new System.Drawing.Point(228, 152);
+            this.Visible.Name = "Visible";
+            this.Visible.PressedColor = System.Drawing.Color.White;
+            this.Visible.Size = new System.Drawing.Size(25, 25);
+            this.Visible.TabIndex = 7;
+            this.Visible.Click += new System.EventHandler(this.Visible_Click);
+            // 
+            // Invisible
+            // 
+            this.Invisible.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Invisible.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Invisible.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Invisible.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Invisible.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Invisible.FillColor = System.Drawing.Color.White;
+            this.Invisible.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Invisible.ForeColor = System.Drawing.Color.White;
+            this.Invisible.HoverState.FillColor = System.Drawing.Color.White;
+            this.Invisible.Image = global::GymManagemement.Properties.Resources.Invisible;
+            this.Invisible.ImageSize = new System.Drawing.Size(22, 22);
+            this.Invisible.Location = new System.Drawing.Point(228, 152);
+            this.Invisible.Name = "Invisible";
+            this.Invisible.PressedColor = System.Drawing.Color.White;
+            this.Invisible.Size = new System.Drawing.Size(25, 25);
+            this.Invisible.TabIndex = 6;
+            this.Invisible.Click += new System.EventHandler(this.Invisible_Click);
             // 
             // picPass
             // 
@@ -155,6 +199,7 @@
             this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPass.ForeColor = System.Drawing.Color.Black;
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Location = new System.Drawing.Point(65, 146);
             this.txtPass.Name = "txtPass";
@@ -164,24 +209,25 @@
             this.txtPass.Size = new System.Drawing.Size(200, 36);
             this.txtPass.TabIndex = 2;
             // 
-            // txtLogin
+            // txtUser
             // 
-            this.txtLogin.BorderRadius = 20;
-            this.txtLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLogin.DefaultText = "";
-            this.txtLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLogin.Location = new System.Drawing.Point(65, 104);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.PlaceholderText = "Tài Khoản";
-            this.txtLogin.SelectedText = "";
-            this.txtLogin.Size = new System.Drawing.Size(200, 36);
-            this.txtLogin.TabIndex = 1;
+            this.txtUser.BorderRadius = 20;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUser.ForeColor = System.Drawing.Color.Black;
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Location = new System.Drawing.Point(65, 104);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PlaceholderText = "Tài Khoản";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(200, 36);
+            this.txtUser.TabIndex = 1;
             // 
             // lbLogin
             // 
@@ -219,6 +265,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.ForeColor = System.Drawing.Color.Gold;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -241,12 +288,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel plLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtPass;
-        private Guna.UI2.WinForms.Guna2TextBox txtLogin;
+        private Guna.UI2.WinForms.Guna2TextBox txtUser;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbLogin;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picLogin;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picPass;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button Invisible;
+        private Guna.UI2.WinForms.Guna2Button Visible;
     }
 }
 

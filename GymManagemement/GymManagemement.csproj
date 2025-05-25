@@ -179,6 +179,7 @@
     <Compile Include="ModelControls\UCMemExpired.Designer.cs">
       <DependentUpon>UCMemExpired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +192,7 @@
     <Compile Include="Services\Load_payment.cs" />
     <Compile Include="Services\Load_Product.cs" />
     <Compile Include="Services\Load_SumAndRatio_Home.cs" />
+    <Compile Include="Services\Load_User.cs" />
     <Compile Include="Services\Transaction.cs" />
     <Compile Include="ModelControls\UCLoadpayment.cs">
       <SubType>UserControl</SubType>
@@ -650,6 +652,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\dumbbell_membership.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Invisible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Eye.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
