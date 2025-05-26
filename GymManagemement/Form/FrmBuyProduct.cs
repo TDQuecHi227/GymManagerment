@@ -71,34 +71,33 @@ namespace GymManagemement
 
         private void txtTra_TextChanged(object sender, EventArgs e)
         {
-            if (txtTra.Text == "") return;
-
-            string text = txtTra.Text.Replace(".", "");
-            if (!long.TryParse(text, out long value)) return;
-
-            // Ghi nhớ vị trí con trỏ cũ
-            int selStart = txtTra.SelectionStart;
-            int lengthBefore = txtTra.Text.Length;
-
-            txtTra.Text = value.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
-
-            // Đặt lại vị trí con trỏ (để không bị nhảy về cuối)
-            int lengthAfter = txtTra.Text.Length;
-            txtTra.SelectionStart = selStart + (lengthAfter - lengthBefore);
-            if (txtTra.Text != "")
-            {
-                int tra = Convert.ToInt32(txtTra.Text.Replace(".", ""));
-                Tongtien = (Sl * Convert.ToInt32(lbPrice.Text.Replace(" VND", "").Replace(".", "")));
-                Thua = tra - Tongtien;
-                if (Thua > 0)
-                {
-                    lbThua.Text = Thua.ToString("N0");
-                }
-            }
-            else
+            if (string.IsNullOrWhiteSpace(txtTra.Text))
             {
                 lbThua.Text = "0";
+                return;
             }
+
+            string rawText = txtTra.Text.Replace(".", "").Replace(",", "");
+
+            if (!long.TryParse(rawText, out long tienKhachTra))
+                return;
+
+            // Ghi nhớ vị trí con trỏ hiện tại
+            int selStart = txtTra.SelectionStart;
+            int oldLength = txtTra.Text.Length;
+
+            // Format lại chuỗi nhập theo kiểu có dấu ngăn cách hàng nghìn (vi-VN)
+            txtTra.Text = tienKhachTra.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
+
+            // Đặt lại vị trí con trỏ cho đúng
+            int newLength = txtTra.Text.Length;
+            txtTra.SelectionStart = selStart + (newLength - oldLength);
+
+            // Tính tiền thừa
+            Thua = (int)(tienKhachTra - Tongtien);
+            lbThua.Text = Thua >= 0
+                ? Thua.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))
+                : "0";
         }
 
         private void btnDone_Click(object sender, EventArgs e)
