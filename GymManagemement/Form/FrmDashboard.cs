@@ -86,7 +86,7 @@ namespace GymManagemement
                         LoadUserControl(new UCMember());
                         break;
                     case "btnTrainer":
-                        // Open Reports form
+                        LoadUserControl(new UCTrainer());
                         break;
                     case "btnPay":
                         LoadUserControl(new UCPayment());

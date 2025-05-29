@@ -73,6 +73,16 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_trainer_fix1 {
+            get {
+                object obj = ResourceManager.GetObject("add_trainer_fix1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Available_Updates {
             get {
                 object obj = ResourceManager.GetObject("Available Updates", resourceCulture);
@@ -116,6 +126,16 @@ namespace GymManagemement.Properties {
         internal static System.Drawing.Bitmap calender_icon {
             get {
                 object obj = ResourceManager.GetObject("calender_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap camera_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("camera_fixcolor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace GymManagemement.Properties {
         internal static System.Drawing.Bitmap edit_fixconer {
             get {
                 object obj = ResourceManager.GetObject("edit_fixconer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_white {
+            get {
+                object obj = ResourceManager.GetObject("edit_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,6 +403,16 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap remove {
+            get {
+                object obj = ResourceManager.GetObject("remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
@@ -416,6 +456,26 @@ namespace GymManagemement.Properties {
         internal static System.Drawing.Bitmap trainer_fixconer {
             get {
                 object obj = ResourceManager.GetObject("trainer_fixconer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upload_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("upload_fixcolor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upload_fixsize {
+            get {
+                object obj = ResourceManager.GetObject("upload_fixsize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
