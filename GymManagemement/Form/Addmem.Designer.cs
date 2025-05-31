@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_pt = new Guna.UI2.WinForms.Guna2Button();
             this.dtp_joindate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,27 +53,35 @@
             this.btn_clearname = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_close = new Guna.UI2.WinForms.Guna2Button();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_none = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pl_addmem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
+            this.pl_addmem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // guna2PictureBox9
+            // 
+            this.guna2PictureBox9.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox9.Image = global::GymManagemement.Properties.Resources.membership_fix;
+            this.guna2PictureBox9.ImageRotate = 0F;
+            this.guna2PictureBox9.Location = new System.Drawing.Point(20, 202);
+            this.guna2PictureBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox9.Name = "guna2PictureBox9";
+            this.guna2PictureBox9.Size = new System.Drawing.Size(22, 21);
+            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox9.TabIndex = 72;
+            this.guna2PictureBox9.TabStop = false;
             // 
             // btn_pt
             // 
@@ -106,7 +115,7 @@
             this.dtp_joindate.FillColor = System.Drawing.Color.White;
             this.dtp_joindate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_joindate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_joindate.Location = new System.Drawing.Point(135, 266);
+            this.dtp_joindate.Location = new System.Drawing.Point(155, 273);
             this.dtp_joindate.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_joindate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_joindate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -127,11 +136,10 @@
             this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox11.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Location = new System.Drawing.Point(13, 269);
+            this.guna2TextBox11.Location = new System.Drawing.Point(20, 273);
             this.guna2TextBox11.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox11.Name = "guna2TextBox11";
             this.guna2TextBox11.PlaceholderText = "";
@@ -148,7 +156,7 @@
             this.dtp_DoB.FillColor = System.Drawing.Color.White;
             this.dtp_DoB.Font = new System.Drawing.Font("Segoe UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_DoB.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_DoB.Location = new System.Drawing.Point(135, 232);
+            this.dtp_DoB.Location = new System.Drawing.Point(155, 234);
             this.dtp_DoB.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_DoB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_DoB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -169,16 +177,15 @@
             this.guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox10.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox10.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Location = new System.Drawing.Point(45, 239);
+            this.guna2TextBox10.Location = new System.Drawing.Point(17, 241);
             this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox10.Name = "guna2TextBox10";
             this.guna2TextBox10.PlaceholderText = "";
             this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.Size = new System.Drawing.Size(45, 17);
+            this.guna2TextBox10.Size = new System.Drawing.Size(61, 17);
             this.guna2TextBox10.TabIndex = 58;
             // 
             // btn_female
@@ -317,7 +324,6 @@
             this.pl_addmem.Controls.Add(this.btn_pt);
             this.pl_addmem.Controls.Add(this.btn_none);
             this.pl_addmem.Controls.Add(this.guna2PictureBox8);
-            this.pl_addmem.Controls.Add(this.guna2PictureBox7);
             this.pl_addmem.Controls.Add(this.dtp_joindate);
             this.pl_addmem.Controls.Add(this.dtp_DoB);
             this.pl_addmem.Controls.Add(this.btn_female);
@@ -327,7 +333,6 @@
             this.pl_addmem.Controls.Add(this.guna2PictureBox5);
             this.pl_addmem.Controls.Add(this.txt_phone);
             this.pl_addmem.Controls.Add(this.guna2PictureBox4);
-            this.pl_addmem.Controls.Add(this.guna2PictureBox3);
             this.pl_addmem.Controls.Add(this.txt_fullname);
             this.pl_addmem.Controls.Add(this.guna2PictureBox1);
             this.pl_addmem.Controls.Add(this.guna2TextBox11);
@@ -549,19 +554,6 @@
             this.btn_add.Text = "+Add";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // guna2PictureBox9
-            // 
-            this.guna2PictureBox9.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox9.Image = global::GymManagemement.Properties.Resources.membership_fix;
-            this.guna2PictureBox9.ImageRotate = 0F;
-            this.guna2PictureBox9.Location = new System.Drawing.Point(20, 202);
-            this.guna2PictureBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox9.Name = "guna2PictureBox9";
-            this.guna2PictureBox9.Size = new System.Drawing.Size(22, 21);
-            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox9.TabIndex = 72;
-            this.guna2PictureBox9.TabStop = false;
-            // 
             // btn_none
             // 
             this.btn_none.BackColor = System.Drawing.Color.White;
@@ -597,19 +589,6 @@
             this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox8.TabIndex = 68;
             this.guna2PictureBox8.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox7.Image = global::GymManagemement.Properties.Resources.calender_fix;
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(19, 236);
-            this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox7.TabIndex = 62;
-            this.guna2PictureBox7.TabStop = false;
             // 
             // guna2PictureBox6
             // 
@@ -649,17 +628,6 @@
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox4.TabIndex = 48;
             this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(0, 58);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(594, 1);
-            this.guna2PictureBox3.TabIndex = 47;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // guna2PictureBox1
             // 
@@ -706,19 +674,16 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.pl_addmem);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Addmem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.Addmem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             this.pl_addmem.ResumeLayout(false);
             this.pl_addmem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -729,7 +694,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
         private Guna.UI2.WinForms.Guna2Button btn_pt;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_joindate;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox11;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_DoB;
