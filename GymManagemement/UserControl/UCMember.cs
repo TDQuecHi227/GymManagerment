@@ -19,6 +19,7 @@ namespace GymManagemement
         public UCMember()
         {
             InitializeComponent();
+            dtp_date.Value = DateTime.Now; // Đặt giá trị mặc định cho DateTimePicker là ngày hiện tại
         }
         private void LoadDataMember()
         {
@@ -50,30 +51,8 @@ namespace GymManagemement
         private void btn_add_Click(object sender, EventArgs e)
         {
             Addmem addmem = new Addmem();
-
-            var result = addmem.ShowDialog(); // Hiện form Addmem  
-
-            if (result == DialogResult.OK && addmem.NewMemberData != null)
+            if (addmem.ShowDialog() == DialogResult.OK)
             {
-                var newMember = addmem.NewMemberData;
-
-                // Thêm vào cơ sở dữ liệu hoặc danh sách (nếu bạn đã có)  
-                var service = new Load_Member();
-                string err = string.Empty; // Declare and initialize the 'err' variable  
-                service.AddMember(newMember, ref err); // đảm bảo bạn có hàm AddMember()
-                                                       // 
-                
-                if (!string.IsNullOrEmpty(err))
-                {
-                    MessageBox.Show("Error: " + err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                NewMemberList.newMembers.Insert(0, new NewMember
-                {
-                    Name = newMember.FullName,
-                    RegisteredAt = DateTime.Now,
-                });
-                // Load lại danh sách để hiển thị  
                 LoadDataMember();
             }
         }

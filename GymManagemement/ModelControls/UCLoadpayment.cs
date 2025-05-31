@@ -33,9 +33,21 @@ namespace GymManagemement
         {
             if (ProductData != null)
             {
-                List<ProductDetailView> chiTiet = new Load_payment().GetTransactionDetails(ProductData.Id);
-                FrmMorePayment form = new FrmMorePayment(chiTiet);
-                form.ShowDialog();
+                var service = new Load_payment();
+
+                var chiTietProduct = service.GetTransactionDetails(ProductData.Id);
+                var chiTietMembership = service.GetMembershipDetails(ProductData.Id);
+
+                if (chiTietProduct != null && chiTietProduct.Count > 0)
+                {
+                    FrmMorePayment form = new FrmMorePayment(chiTietProduct);
+                    form.ShowDialog();
+                }
+                if (chiTietMembership != null && chiTietMembership.Count > 0)
+                {
+                    FrmMoreMembership form = new FrmMoreMembership(chiTietMembership);
+                    form.ShowDialog();
+                }
             }
         }
     }
