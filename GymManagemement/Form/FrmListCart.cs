@@ -182,6 +182,13 @@ namespace GymManagemement
                 e.Handled = true;
             }
         }
+        private void txtOnlyNumber_KeyPress_Tra(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
             string phone = txtPhone.Text.Trim();
@@ -189,7 +196,7 @@ namespace GymManagemement
             Load_Member load_Member = new Load_Member();
             if (phone.Length == 10)
             {
-                lbName_Mem.Text = load_Member.findMem_Product(phone, ref err);
+                lbName_Mem.Text = load_Member.findMem(phone, ref err);
             }
         }
     }

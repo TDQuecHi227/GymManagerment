@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using GymManagemement.Activities;
 using GymManagemement.Connection;
 using GymManagemement.Models;
 using GymManagemement.NewMembers;
@@ -103,8 +104,37 @@ namespace GymManagemement
                 JoinDate = dtp_joindate.Value,
                 Trainer = null,
             };
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            string err = "";
+            var service = new Service.Load_Member();
+            bool ok = service.AddMember(NewMemberData, ref err);
+            if (ok)
+            {
+                if (cb_membership.SelectedItem is DataRowView selectedRow)
+                {
+                    Loadmembership data = new Loadmembership
+                    {
+                        Id = selectedRow["membership_id"].ToString(),
+                        Name = selectedRow["name"].ToString(),
+                        Price = selectedRow["price"].ToString(),
+                        Durations = selectedRow["duration_days"].ToString(),
+                    };
+                    FrmBuyMembership frmBuyMembership = new FrmBuyMembership(data, txt_phone.Text.Trim());
+                    frmBuyMembership.ShowDialog();
+                }
+                NewMemberList.newMembers.Insert(0, new NewMember
+                {
+                    Name = NewMemberData.FullName,
+                    RegisteredAt = DateTime.Now,
+                });
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                 
+            }
+            else
+            {
+                MessageBox.Show("Lỗi khi cập nhật: " + err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_clearname_Click(object sender, EventArgs e)
@@ -179,6 +209,8 @@ namespace GymManagemement
         }
         private void btn_save_Click(object sender, EventArgs e)
         {
+
+            
             if (!IsValidGmail(txt_email.Text))
             {
                 MessageBox.Show("Vui lòng nhập email hợp lệ có đuôi @gmail.com", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -219,6 +251,7 @@ namespace GymManagemement
             {
                 MessageBox.Show("Lỗi khi cập nhật: " + err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
         #region ----UI GENDER----
         private void btn_male_Click(object sender, EventArgs e)
@@ -246,16 +279,12 @@ namespace GymManagemement
         {
             selectedTrainingType = "Solo";
             HighlightTrainingTypeButton(btn_none);
-            btn_choosetrainer.FillColor = SystemColors.Control;
-            btn_choosetrainer.Enabled = false;
         }
 
         private void btn_pt_Click(object sender, EventArgs e)
         {
             selectedTrainingType = "PT";
             HighlightTrainingTypeButton(btn_pt);
-            btn_choosetrainer.FillColor = Color.RoyalBlue;
-            btn_choosetrainer.Enabled = true;
         }
         private void HighlightTrainingTypeButton(Guna.UI2.WinForms.Guna2Button selectedBtn)
         {
@@ -270,7 +299,7 @@ namespace GymManagemement
             try
             {
                 ConnDB db = new ConnDB();
-                string query = "SELECT membership_id, name FROM memberships";
+                string query = "SELECT * FROM memberships";
                 DataSet ds = db.ExecuteQueryData(query, CommandType.Text);
 
                 cb_membership.DataSource = ds.Tables[0];
@@ -289,9 +318,9 @@ namespace GymManagemement
                 selectedMembership = cb_membership.SelectedValue.ToString();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnDone_Click(object sender, EventArgs e)
         {
-            Moreclick?.Invoke(this, EventArgs.Empty);
+            
         }
     }
 }

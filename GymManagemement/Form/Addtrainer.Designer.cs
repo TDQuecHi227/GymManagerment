@@ -492,6 +492,7 @@
             this.Controls.Add(this.pb_frame);
             this.Controls.Add(this.pb_trainer);
             this.Name = "Addtrainer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Addtrainer";
             this.Load += new System.EventHandler(this.Addtrainer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_upload)).EndInit();

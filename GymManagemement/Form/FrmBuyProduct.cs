@@ -217,7 +217,7 @@ namespace GymManagemement
             Load_Member load_Member = new Load_Member();
             if (phone.Length == 10)
             {
-                lbName_Mem.Text = load_Member.findMem_Product(phone, ref err);
+                lbName_Mem.Text = load_Member.findMem(phone, ref err);
             }
             else if (phone.Length < 10)
             {

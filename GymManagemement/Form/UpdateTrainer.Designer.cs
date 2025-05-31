@@ -56,10 +56,14 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.preview_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.preview_email = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.preview_special = new Guna.UI2.WinForms.Guna2Button();
             this.preview_phone = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.preview_frame = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.preview_avt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_des = new Guna.UI2.WinForms.Guna2TextBox();
@@ -73,20 +77,16 @@
             this.btn_update = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.preview_avt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pb_trainer = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_avt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_camera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preview_avt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_trainer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -494,6 +494,39 @@
             this.guna2Button1.Text = "Delete";
             this.guna2Button1.TextOffset = new System.Drawing.Point(3, 0);
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BorderRadius = 5;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.guna2Button2.Image = global::GymManagemement.Properties.Resources.edit_white;
+            this.guna2Button2.ImageSize = new System.Drawing.Size(11, 11);
+            this.guna2Button2.Location = new System.Drawing.Point(32, 244);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.PressedDepth = 0;
+            this.guna2Button2.Size = new System.Drawing.Size(66, 22);
+            this.guna2Button2.TabIndex = 7;
+            this.guna2Button2.Text = "Edit";
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox5.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox5.Image = global::GymManagemement.Properties.Resources.mail_icon;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(29, 220);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(25, 13);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 6;
+            this.guna2PictureBox5.TabStop = false;
+            // 
             // preview_email
             // 
             this.preview_email.BackColor = System.Drawing.Color.Transparent;
@@ -503,6 +536,18 @@
             this.preview_email.Size = new System.Drawing.Size(111, 19);
             this.preview_email.TabIndex = 5;
             this.preview_email.Text = "t.luan@gmail.com";
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.BackgroundImage = global::GymManagemement.Properties.Resources.phone_icon;
+            this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(50, 193);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(15, 17);
+            this.guna2PictureBox6.TabIndex = 4;
+            this.guna2PictureBox6.TabStop = false;
             // 
             // preview_special
             // 
@@ -559,6 +604,20 @@
             this.preview_frame.TabIndex = 7;
             this.preview_frame.Text = "btn_setavt";
             this.preview_frame.UseTransparentBackground = true;
+            // 
+            // preview_avt
+            // 
+            this.preview_avt.BackColor = System.Drawing.Color.Transparent;
+            this.preview_avt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.preview_avt.FillColor = System.Drawing.Color.Transparent;
+            this.preview_avt.ImageRotate = 0F;
+            this.preview_avt.Location = new System.Drawing.Point(49, 8);
+            this.preview_avt.Name = "preview_avt";
+            this.preview_avt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.preview_avt.Size = new System.Drawing.Size(111, 111);
+            this.preview_avt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.preview_avt.TabIndex = 0;
+            this.preview_avt.TabStop = false;
             // 
             // guna2HtmlLabel20
             // 
@@ -776,65 +835,6 @@
             this.guna2PictureBox4.TabStop = false;
             this.guna2PictureBox4.UseTransparentBackground = true;
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
-            this.guna2Button2.Image = global::GymManagemement.Properties.Resources.edit_white;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(11, 11);
-            this.guna2Button2.Location = new System.Drawing.Point(32, 244);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedDepth = 0;
-            this.guna2Button2.Size = new System.Drawing.Size(66, 22);
-            this.guna2Button2.TabIndex = 7;
-            this.guna2Button2.Text = "Edit";
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox5.Image = global::GymManagemement.Properties.Resources.mail_icon;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(29, 220);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(25, 13);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 6;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.BackgroundImage = global::GymManagemement.Properties.Resources.phone_icon;
-            this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(50, 193);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(15, 17);
-            this.guna2PictureBox6.TabIndex = 4;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // preview_avt
-            // 
-            this.preview_avt.BackColor = System.Drawing.Color.Transparent;
-            this.preview_avt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.preview_avt.FillColor = System.Drawing.Color.Transparent;
-            this.preview_avt.ImageRotate = 0F;
-            this.preview_avt.Location = new System.Drawing.Point(49, 8);
-            this.preview_avt.Name = "preview_avt";
-            this.preview_avt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.preview_avt.Size = new System.Drawing.Size(111, 111);
-            this.preview_avt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.preview_avt.TabIndex = 0;
-            this.preview_avt.TabStop = false;
-            // 
             // pb_trainer
             // 
             this.pb_trainer.BackColor = System.Drawing.Color.Transparent;
@@ -892,19 +892,20 @@
             this.Controls.Add(this.pb_frame);
             this.Controls.Add(this.pb_trainer);
             this.Name = "UpdateTrainer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UpdateTrainer";
             this.Load += new System.EventHandler(this.UpdateTrainer_Load);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_avt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_camera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preview_avt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_trainer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

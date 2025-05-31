@@ -16,7 +16,14 @@ namespace GymManagemement.Services
         public List<(string Label, int Value)> GetMonthlyRevenueData()
         {
             var result = new List<(string, int)>();
-            string sql = "SELECT MONTH(transaction_date) AS Month, SUM(total_amount) AS Total FROM transactions GROUP BY MONTH(transaction_date) ORDER BY Month";
+            string sql = @"
+    SELECT 
+        MONTH(transaction_date) AS Month, 
+        SUM(total_amount) AS Total 
+    FROM transactions 
+    WHERE YEAR(transaction_date) = YEAR(GETDATE())
+    GROUP BY MONTH(transaction_date) 
+    ORDER BY Month";
             DataSet ds = db.ExecuteQueryData(sql, CommandType.Text);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
@@ -45,7 +52,7 @@ namespace GymManagemement.Services
         {
             var vietnameseDays = new List<string>
 {
-    "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy", "Chủ nhật"
+    "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"
 };
 
             // ánh xạ từ tiếng Anh → tiếng Việt
@@ -57,17 +64,18 @@ namespace GymManagemement.Services
                 ["Thursday"] = "Thứ năm",
                 ["Friday"] = "Thứ sáu",
                 ["Saturday"] = "Thứ bảy",
-                ["Sunday"] = "Chủ nhật"
             };
 
             var tempResult = new Dictionary<string, int>();
 
-            string sql = @"
-    SELECT 
-        DATENAME(weekday, transaction_date) AS DayName, 
-        SUM(total_amount) AS Total 
-    FROM transactions 
-    GROUP BY DATENAME(weekday, transaction_date)";
+            string sql = @"SELECT
+                            DATENAME(weekday, transaction_date) AS DayName,
+                            SUM(total_amount) AS Total
+                        FROM transactions
+                        WHERE transaction_date >= DATEADD(DAY, 1 - DATEPART(WEEKDAY, GETDATE()), CAST(GETDATE() AS DATE))
+  AND transaction_date <  DATEADD(DAY, 7 - DATEPART(WEEKDAY, GETDATE()) + 1, CAST(GETDATE() AS DATE))
+  AND transaction_date <= GETDATE()
+                        GROUP BY DATENAME(weekday, transaction_date)";
             DataSet ds = db.ExecuteQueryData(sql, CommandType.Text);
 
             foreach (DataRow row in ds.Tables[0].Rows)

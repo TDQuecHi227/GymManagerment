@@ -39,9 +39,6 @@
             this.lbID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDone = new Guna.UI2.WinForms.Guna2Button();
             this.btnESC = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.plCash = new Guna.UI2.WinForms.Guna2Panel();
             this.txtTra = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbThua = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,23 +46,26 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbTotal = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Cash = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Bank = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbName_Mem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.picBank = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnMinus = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlus = new Guna.UI2.WinForms.Guna2Button();
             this.PicProduct = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Cash = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Bank = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbName_Mem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.plCash.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBank)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -195,46 +195,6 @@
             this.btnESC.Text = "Hủy";
             this.btnESC.Click += new System.EventHandler(this.btnESC_Click);
             // 
-            // txtPhone
-            // 
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultText = "";
-            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(617, 3);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PlaceholderText = "";
-            this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(143, 24);
-            this.txtPhone.TabIndex = 48;
-            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
-            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnlyNumber_KeyPress);
-            // 
-            // guna2HtmlLabel8
-            // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(484, 3);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(127, 23);
-            this.guna2HtmlLabel8.TabIndex = 49;
-            this.guna2HtmlLabel8.Text = "SDT Khách Hàng: ";
-            // 
-            // guna2HtmlLabel9
-            // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(210, 223);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(222, 23);
-            this.guna2HtmlLabel9.TabIndex = 50;
-            this.guna2HtmlLabel9.Text = "Chọn phương thức thanh toán";
-            // 
             // plCash
             // 
             this.plCash.Controls.Add(this.txtTra);
@@ -318,57 +278,15 @@
             this.guna2HtmlLabel2.TabIndex = 52;
             this.guna2HtmlLabel2.Text = "Tổng hóa đơn(VND): ";
             // 
-            // Cash
+            // lbName_Mem
             // 
-            this.Cash.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.Cash.CheckedState.BorderThickness = 0;
-            this.Cash.CheckedState.FillColor = System.Drawing.Color.Blue;
-            this.Cash.CheckedState.InnerColor = System.Drawing.Color.Blue;
-            this.Cash.Location = new System.Drawing.Point(454, 223);
-            this.Cash.Name = "Cash";
-            this.Cash.Size = new System.Drawing.Size(22, 20);
-            this.Cash.TabIndex = 54;
-            this.Cash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Cash.UncheckedState.BorderThickness = 2;
-            this.Cash.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Cash.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Cash.CheckedChanged += new System.EventHandler(this.Cash_CheckedChanged);
-            // 
-            // guna2HtmlLabel10
-            // 
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(515, 221);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(181, 23);
-            this.guna2HtmlLabel10.TabIndex = 55;
-            this.guna2HtmlLabel10.Text = "Thanh toán bằng tiền mặt";
-            // 
-            // Bank
-            // 
-            this.Bank.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.Bank.CheckedState.BorderThickness = 0;
-            this.Bank.CheckedState.FillColor = System.Drawing.Color.Blue;
-            this.Bank.CheckedState.InnerColor = System.Drawing.Color.Blue;
-            this.Bank.Location = new System.Drawing.Point(454, 259);
-            this.Bank.Name = "Bank";
-            this.Bank.Size = new System.Drawing.Size(22, 20);
-            this.Bank.TabIndex = 57;
-            this.Bank.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Bank.UncheckedState.BorderThickness = 2;
-            this.Bank.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Bank.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Bank.CheckedChanged += new System.EventHandler(this.Bank_CheckedChanged);
-            // 
-            // guna2HtmlLabel11
-            // 
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(515, 256);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(221, 23);
-            this.guna2HtmlLabel11.TabIndex = 59;
-            this.guna2HtmlLabel11.Text = "Thanh toán bằng chuyển khoản";
+            this.lbName_Mem.BackColor = System.Drawing.Color.Transparent;
+            this.lbName_Mem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName_Mem.Location = new System.Drawing.Point(617, 33);
+            this.lbName_Mem.Name = "lbName_Mem";
+            this.lbName_Mem.Size = new System.Drawing.Size(3, 2);
+            this.lbName_Mem.TabIndex = 62;
+            this.lbName_Mem.Text = null;
             // 
             // picBank
             // 
@@ -381,28 +299,6 @@
             this.picBank.TabIndex = 60;
             this.picBank.TabStop = false;
             this.picBank.Visible = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::GymManagemement.Properties.Resources.Wallet;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(484, 254);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox2.TabIndex = 58;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::GymManagemement.Properties.Resources.Cash;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(484, 218);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox1.TabIndex = 56;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // btnMinus
             // 
@@ -447,6 +343,120 @@
             this.PicProduct.TabIndex = 29;
             this.PicProduct.TabStop = false;
             // 
+            // txtPhone
+            // 
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DefaultText = "";
+            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Location = new System.Drawing.Point(617, 3);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PlaceholderText = "";
+            this.txtPhone.SelectedText = "";
+            this.txtPhone.Size = new System.Drawing.Size(143, 24);
+            this.txtPhone.TabIndex = 48;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnlyNumber_KeyPress);
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(484, 3);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(127, 23);
+            this.guna2HtmlLabel8.TabIndex = 49;
+            this.guna2HtmlLabel8.Text = "SDT Khách Hàng: ";
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(210, 223);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(222, 23);
+            this.guna2HtmlLabel9.TabIndex = 50;
+            this.guna2HtmlLabel9.Text = "Chọn phương thức thanh toán";
+            // 
+            // Cash
+            // 
+            this.Cash.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.Cash.CheckedState.BorderThickness = 0;
+            this.Cash.CheckedState.FillColor = System.Drawing.Color.Blue;
+            this.Cash.CheckedState.InnerColor = System.Drawing.Color.Blue;
+            this.Cash.Location = new System.Drawing.Point(454, 223);
+            this.Cash.Name = "Cash";
+            this.Cash.Size = new System.Drawing.Size(22, 20);
+            this.Cash.TabIndex = 54;
+            this.Cash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Cash.UncheckedState.BorderThickness = 2;
+            this.Cash.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Cash.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Cash.CheckedChanged += new System.EventHandler(this.Cash_CheckedChanged);
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(515, 221);
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(181, 23);
+            this.guna2HtmlLabel10.TabIndex = 55;
+            this.guna2HtmlLabel10.Text = "Thanh toán bằng tiền mặt";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::GymManagemement.Properties.Resources.Cash;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(484, 218);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1.TabIndex = 56;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // Bank
+            // 
+            this.Bank.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.Bank.CheckedState.BorderThickness = 0;
+            this.Bank.CheckedState.FillColor = System.Drawing.Color.Blue;
+            this.Bank.CheckedState.InnerColor = System.Drawing.Color.Blue;
+            this.Bank.Location = new System.Drawing.Point(454, 259);
+            this.Bank.Name = "Bank";
+            this.Bank.Size = new System.Drawing.Size(22, 20);
+            this.Bank.TabIndex = 57;
+            this.Bank.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Bank.UncheckedState.BorderThickness = 2;
+            this.Bank.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Bank.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Bank.CheckedChanged += new System.EventHandler(this.Bank_CheckedChanged);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::GymManagemement.Properties.Resources.Wallet;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(484, 254);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox2.TabIndex = 58;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2HtmlLabel11
+            // 
+            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(515, 256);
+            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(221, 23);
+            this.guna2HtmlLabel11.TabIndex = 59;
+            this.guna2HtmlLabel11.Text = "Thanh toán bằng chuyển khoản";
+            // 
             // guna2HtmlLabel12
             // 
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
@@ -456,16 +466,6 @@
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(125, 23);
             this.guna2HtmlLabel12.TabIndex = 61;
             this.guna2HtmlLabel12.Text = "Tên Khách Hàng: ";
-            // 
-            // lbName_Mem
-            // 
-            this.lbName_Mem.BackColor = System.Drawing.Color.Transparent;
-            this.lbName_Mem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName_Mem.Location = new System.Drawing.Point(617, 33);
-            this.lbName_Mem.Name = "lbName_Mem";
-            this.lbName_Mem.Size = new System.Drawing.Size(3, 2);
-            this.lbName_Mem.TabIndex = 62;
-            this.lbName_Mem.Text = null;
             // 
             // FrmBuyProduct
             // 
@@ -505,9 +505,9 @@
             this.plCash.ResumeLayout(false);
             this.plCash.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBank)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,9 +528,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbID;
         private Guna.UI2.WinForms.Guna2Button btnDone;
         private Guna.UI2.WinForms.Guna2Button btnESC;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2Panel plCash;
         private Guna.UI2.WinForms.Guna2TextBox txtTra;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbThua;
@@ -538,14 +535,17 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbTotal;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2PictureBox picBank;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbName_Mem;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2CustomRadioButton Cash;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2CustomRadioButton Bank;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2PictureBox picBank;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbName_Mem;
     }
 }

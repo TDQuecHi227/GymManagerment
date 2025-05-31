@@ -115,7 +115,7 @@ namespace GymManagemement.Service
         public bool UpdateMemberShip(Loadmembership membership, ref string err)
         {
             MessageBox.Show($"ID: {membership.Id}, Name: {membership.Name}, Duration: {membership.Durations}, Price: {membership.Price}");
-            
+
             string query = @"UPDATE memberships SET
                              name = @name,
                              duration_days = @duration_days,
@@ -128,7 +128,12 @@ namespace GymManagemement.Service
             cmd.Parameters.AddWithValue("@duration_days", membership.Durations);
             cmd.Parameters.AddWithValue("@price", membership.Price);
 
-            return conn.MyExecuteNonQuery(cmd,CommandType.Text, ref err);
+            return conn.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
+        }
+        public int SumMember(int id)
+        {
+            string query = $@"SELECT COUNT(*) FROM members where membership_id = {id}";
+            return conn.ExecuteScalar(query);
         }
     }
 }

@@ -63,6 +63,24 @@ namespace GymManagemement.Services
 
             return result;
         }
+        public List<MembershipDetailView> GetMembershipDetails(int transactionId)
+        {
+            List<MembershipDetailView> result = new List<MembershipDetailView>();
+            string query = $@"SELECT m.name, tm.price_at_time
+                             FROM transaction_packages tm
+                             JOIN memberships m ON tm.membership_id = m.membership_id
+                             WHERE tm.transaction_id = {transactionId}";
+            var data = conn.ExecuteQueryData(query, CommandType.Text);
+            foreach (DataRow item in data.Tables[0].Rows)
+            {
+                result.Add(new MembershipDetailView
+                {
+                    Name = item["name"].ToString(),
+                    PriceAtTime = Convert.ToInt32(item["price_at_time"]),
+                });
+            }
+            return result;
+        }
 
     }
 }

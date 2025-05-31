@@ -129,6 +129,18 @@
     <Compile Include="Form\UpdateTrainer.Designer.cs">
       <DependentUpon>UpdateTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FrmBuyMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmBuyMembership.Designer.cs">
+      <DependentUpon>FrmBuyMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmMoreMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmMoreMembership.Designer.cs">
+      <DependentUpon>FrmMoreMembership.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelControls\UCLoadmember.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +165,7 @@
     <Compile Include="Models\Loadmember.cs" />
     <Compile Include="Models\Loadmembership.cs" />
     <Compile Include="Models\Loadtrainer.cs" />
+    <Compile Include="Models\MembershipDetailView.cs" />
     <Compile Include="Models\NewMemberList.cs" />
     <Compile Include="Models\payment.cs" />
     <Compile Include="ModelControls\Add_Product.cs">
@@ -205,7 +218,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Services\Chart_Provider.cs" />
-    <Compile Include="Services\Load_Activity_Home.cs" />
     <Compile Include="Services\Load_Member.cs" />
     <Compile Include="Services\Load_Membership.cs" />
     <Compile Include="Services\Load_Member_Home.cs" />
@@ -300,6 +312,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UpdateTrainer.resx">
       <DependentUpon>UpdateTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmBuyMembership.resx">
+      <DependentUpon>FrmBuyMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmMoreMembership.resx">
+      <DependentUpon>FrmMoreMembership.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModelControls\ActivityItemControl.resx">
       <DependentUpon>ActivityItemControl.cs</DependentUpon>

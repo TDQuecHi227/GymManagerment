@@ -111,7 +111,7 @@ namespace GymManagemement.Service
 
             return conn.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
         }
-        public string findMem_Product(string phone, ref string err)
+        public string findMem(string phone, ref string err)
         {
             string query = $"SELECT * FROM members WHERE phone = {phone}";
             var ds = conn.ExecuteQueryData(query, CommandType.Text);

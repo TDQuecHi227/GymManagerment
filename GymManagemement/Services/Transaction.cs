@@ -64,8 +64,36 @@ namespace GymManagemement.Services
             // 3. Thực hiện transaction
             return conn.ExecuteTransaction(commands, ref err);
         }
-      
-
+        public bool transaction_membership(Loadmembership membership, string phone, string method)
+        {
+            string err = "";
+            int transactionIdValue = 0;
+            List<SqlCommand> commands = new List<SqlCommand>();
+            // 1. Thêm vào bảng transactions
+            string insertTransaction = @"INSERT INTO transactions (phone, total_amount, transaction_date, payment_method)
+                                 OUTPUT INSERTED.transaction_id
+                                 VALUES (@phone, @total, @date, @method)";
+            SqlCommand cmd = new SqlCommand(insertTransaction);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@phone", phone);
+            cmd.Parameters.AddWithValue("@total", membership.Price);
+            cmd.Parameters.AddWithValue("@date", DateTime.Now);
+            cmd.Parameters.AddWithValue("@method", method);
+            int result = conn.ExecuteScalar(cmd);
+            transactionIdValue = Convert.ToInt32(result);
+            // 2. Thêm chi tiết vào bảng transaction_membership
+            string insertTransactionMembership = @"INSERT INTO transaction_packages (transaction_id, membership_id, start_date, end_date, price_at_time)
+                                            VALUES (@transaction_id, @membership_id, @start_date, @end_date, @price)";
+            SqlCommand cmdInsertMembership = new SqlCommand(insertTransactionMembership);
+            cmdInsertMembership.CommandType = CommandType.Text;
+            cmdInsertMembership.Parameters.AddWithValue("@transaction_id", transactionIdValue);
+            cmdInsertMembership.Parameters.AddWithValue("@membership_id", membership.Id);
+            cmdInsertMembership.Parameters.AddWithValue("@start_date", DateTime.Now);
+            cmdInsertMembership.Parameters.AddWithValue("@end_date", DateTime.Now.AddDays(Convert.ToInt32(membership.Durations)));
+            cmdInsertMembership.Parameters.AddWithValue("@price", membership.Price); // Giá tổng của gói thành viên tại thời điểm mua
+            commands.Add(cmdInsertMembership);
+            return conn.ExecuteTransaction(commands, ref err);
+        }
     }
     
 }
