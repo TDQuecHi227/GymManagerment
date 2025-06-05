@@ -189,6 +189,7 @@ namespace GymManagemement
                 e.Handled = true;
             }
         }
+
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
             string phone = txtPhone.Text.Trim();

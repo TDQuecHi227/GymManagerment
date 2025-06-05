@@ -80,7 +80,7 @@ namespace GymManagemement
                         HomeFunction();
                         break;
                     case "btnSchedule":
-                        // Open Manage Payments form
+                        LoadUserControl(new UCSchedule());
                         break;
                     case "btnMember":
                         LoadUserControl(new UCMember());

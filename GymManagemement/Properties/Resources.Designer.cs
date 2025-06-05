@@ -153,6 +153,16 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clock_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("clock_fixcolor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Coins {
             get {
                 object obj = ResourceManager.GetObject("Coins", resourceCulture);
@@ -166,6 +176,16 @@ namespace GymManagemement.Properties {
         internal static System.Drawing.Bitmap Combo_Chart {
             get {
                 object obj = ResourceManager.GetObject("Combo Chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dayofweek_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("dayofweek_fixcolor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +236,16 @@ namespace GymManagemement.Properties {
         internal static System.Drawing.Bitmap edit_white {
             get {
                 object obj = ResourceManager.GetObject("edit_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("email_fixcolor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +353,29 @@ namespace GymManagemement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_lich_fixpixel {
+            get {
+                object obj = ResourceManager.GetObject("logo_lich_fixpixel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mail_icon {
             get {
                 object obj = ResourceManager.GetObject("mail_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap member_name_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("member_name_fixcolor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +426,26 @@ namespace GymManagemement.Properties {
         internal static System.Drawing.Bitmap Personal_Trainer {
             get {
                 object obj = ResourceManager.GetObject("Personal Trainer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_fixcolor {
+            get {
+                object obj = ResourceManager.GetObject("phone_fixcolor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_fixcolor1 {
+            get {
+                object obj = ResourceManager.GetObject("phone_fixcolor1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

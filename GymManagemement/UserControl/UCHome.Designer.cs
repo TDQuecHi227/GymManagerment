@@ -51,7 +51,6 @@
             this.flpNewMembers = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.lbRatioMem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbTotalMem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -300,7 +299,7 @@
             this.guna2ComboBox1.Location = new System.Drawing.Point(570, 3);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox1.StartIndex = 0;
+            this.guna2ComboBox1.StartIndex = 2;
             this.guna2ComboBox1.TabIndex = 1;
             this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
@@ -361,7 +360,6 @@
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.BorderRadius = 20;
-            this.guna2CustomGradientPanel4.Controls.Add(this.lbRatioMem);
             this.guna2CustomGradientPanel4.Controls.Add(this.lbTotalMem);
             this.guna2CustomGradientPanel4.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel4.Controls.Add(this.guna2HtmlLabel3);
@@ -369,16 +367,6 @@
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(200, 95);
             this.guna2CustomGradientPanel4.TabIndex = 8;
-            // 
-            // lbRatioMem
-            // 
-            this.lbRatioMem.BackColor = System.Drawing.Color.Transparent;
-            this.lbRatioMem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRatioMem.Location = new System.Drawing.Point(12, 64);
-            this.lbRatioMem.Name = "lbRatioMem";
-            this.lbRatioMem.Size = new System.Drawing.Size(27, 19);
-            this.lbRatioMem.TabIndex = 3;
-            this.lbRatioMem.Text = "Tỉ lệ";
             // 
             // lbTotalMem
             // 
@@ -675,7 +663,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart Doanhthu;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.FlowLayoutPanel flpMem;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbRatioMem;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbTotalMem;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbTotalTrainer;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbRatioRevenue;

@@ -182,16 +182,12 @@
             this.guna2TextBox10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox10.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-<<<<<<<<< Temporary merge branch 1
-            this.guna2TextBox10.Location = new System.Drawing.Point(38, 273);
-=========
-            this.guna2TextBox10.Location = new System.Drawing.Point(45, 239);
->>>>>>>>> Temporary merge branch 2
+            this.guna2TextBox10.Location = new System.Drawing.Point(48, 244);
             this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox10.Name = "guna2TextBox10";
             this.guna2TextBox10.PlaceholderText = "";
             this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.Size = new System.Drawing.Size(45, 17);
+            this.guna2TextBox10.Size = new System.Drawing.Size(47, 17);
             this.guna2TextBox10.TabIndex = 58;
             // 
             // btn_female

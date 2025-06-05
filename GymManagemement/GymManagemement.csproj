@@ -87,11 +87,47 @@
     <Compile Include="Form\Addtrainer.Designer.cs">
       <DependentUpon>Addtrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Form_Calender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Calender.Designer.cs">
+      <DependentUpon>Form_Calender.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FrmAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FrmAddProduct.Designer.cs">
       <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmAddSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmAddSchedule.Designer.cs">
+      <DependentUpon>FrmAddSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmAddTrainingSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmAddTrainingSession.Designer.cs">
+      <DependentUpon>FrmAddTrainingSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmBuyMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmBuyMembership.Designer.cs">
+      <DependentUpon>FrmBuyMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmListCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmListCart.Designer.cs">
+      <DependentUpon>FrmListCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FrmUpdateProduct.cs">
       <SubType>Form</SubType>
@@ -111,17 +147,17 @@
     <Compile Include="Form\FrmAddToCart.Designer.cs">
       <DependentUpon>FrmAddToCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmListCart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FrmListCart.Designer.cs">
-      <DependentUpon>FrmListCart.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FrmMorePayment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FrmMorePayment.Designer.cs">
       <DependentUpon>FrmMorePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Help_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Help_form.Designer.cs">
+      <DependentUpon>Help_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\UpdateTrainer.cs">
       <SubType>Form</SubType>
@@ -129,18 +165,13 @@
     <Compile Include="Form\UpdateTrainer.Designer.cs">
       <DependentUpon>UpdateTrainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmBuyMembership.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FrmBuyMembership.Designer.cs">
-      <DependentUpon>FrmBuyMembership.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FrmMoreMembership.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FrmMoreMembership.Designer.cs">
       <DependentUpon>FrmMoreMembership.cs</DependentUpon>
     </Compile>
+    <Compile Include="LunaCalendar.cs" />
     <Compile Include="ModelControls\UCLoadmember.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,6 +189,12 @@
     </Compile>
     <Compile Include="ModelControls\UCLoadtrainer.Designer.cs">
       <DependentUpon>UCLoadtrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelControls\UCLoad_Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelControls\UCLoad_Schedule.Designer.cs">
+      <DependentUpon>UCLoad_Schedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ActivityList.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -198,6 +235,8 @@
     </Compile>
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductDetailView.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\Session.cs" />
     <Compile Include="Models\SumAndRatio.cs" />
     <Compile Include="ModelControls\UCMemActive.cs">
       <SubType>UserControl</SubType>
@@ -223,15 +262,22 @@
     <Compile Include="Services\Load_Member_Home.cs" />
     <Compile Include="Services\Load_payment.cs" />
     <Compile Include="Services\Load_Product.cs" />
+    <Compile Include="Services\Load_Schedule.cs" />
     <Compile Include="Services\Load_SumAndRatio_Home.cs" />
     <Compile Include="Services\Load_Trainer.cs" />
     <Compile Include="Services\Load_User.cs" />
-    <Compile Include="Services\Transaction.cs" />
     <Compile Include="ModelControls\UCLoadpayment.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ModelControls\UCLoadpayment.Designer.cs">
       <DependentUpon>UCLoadpayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Transaction.cs" />
+    <Compile Include="UserControl\UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UCMember.cs">
       <SubType>UserControl</SubType>
@@ -257,26 +303,20 @@
     <Compile Include="UserControl\UCProduct.Designer.cs">
       <DependentUpon>UCProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\UCHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\UCHome.Designer.cs">
-      <DependentUpon>UCHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FrmDashboard.Designer.cs">
-      <DependentUpon>FrmDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\UCSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCSchedule.Designer.cs">
+      <DependentUpon>UCSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UCTrainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -292,11 +332,29 @@
     <EmbeddedResource Include="Form\Addtrainer.resx">
       <DependentUpon>Addtrainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Calender.resx">
+      <DependentUpon>Form_Calender.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmAddProduct.resx">
       <DependentUpon>FrmAddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmAddSchedule.resx">
+      <DependentUpon>FrmAddSchedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmAddToCart.resx">
       <DependentUpon>FrmAddToCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmAddTrainingSession.resx">
+      <DependentUpon>FrmAddTrainingSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmBuyMembership.resx">
+      <DependentUpon>FrmBuyMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmListCart.resx">
+      <DependentUpon>FrmListCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmUpdateProduct.resx">
       <DependentUpon>FrmUpdateProduct.cs</DependentUpon>
@@ -304,17 +362,14 @@
     <EmbeddedResource Include="Form\FrmBuyProduct.resx">
       <DependentUpon>FrmBuyProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmListCart.resx">
-      <DependentUpon>FrmListCart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmMorePayment.resx">
       <DependentUpon>FrmMorePayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Help_form.resx">
+      <DependentUpon>Help_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\UpdateTrainer.resx">
       <DependentUpon>UpdateTrainer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmBuyMembership.resx">
-      <DependentUpon>FrmBuyMembership.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmMoreMembership.resx">
       <DependentUpon>FrmMoreMembership.cs</DependentUpon>
@@ -340,6 +395,9 @@
     <EmbeddedResource Include="ModelControls\UCLoadtrainer.resx">
       <DependentUpon>UCLoadtrainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModelControls\UCLoad_Schedule.resx">
+      <DependentUpon>UCLoad_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModelControls\UCMemActive.resx">
       <DependentUpon>UCMemActive.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModelControls\UCLoadpayment.resx">
       <DependentUpon>UCLoadpayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCMember.resx">
       <DependentUpon>UCMember.cs</DependentUpon>
@@ -361,19 +422,16 @@
     <EmbeddedResource Include="UserControl\UCProduct.resx">
       <DependentUpon>UCProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\UCHome.resx">
-      <DependentUpon>UCHome.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmDashboard.resx">
-      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCSchedule.resx">
+      <DependentUpon>UCSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCTrainer.resx">
       <DependentUpon>UCTrainer.cs</DependentUpon>
@@ -727,6 +785,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\upload_fixsize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_lich_fixpixel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\dayofweek_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\clock_fixcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member_name_fixcolor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

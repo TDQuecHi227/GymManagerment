@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using GymManagemement.Connection;
 
 namespace GymManagemement.Service
@@ -123,6 +124,20 @@ namespace GymManagemement.Service
             {
                 err = "Không tìm thấy thành viên với số điện thoại này.";
                 return null;
+            }
+        }
+        public int findMemId(string phone, ref string err)
+        {
+            string query = $"SELECT * FROM members WHERE phone = {phone}";
+            var ds = conn.ExecuteQueryData(query, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToInt32(ds.Tables[0].Rows[0]["member_id"]);
+            }
+            else
+            {
+                err = "Không tìm thấy thành viên với số điện thoại này.";
+                return -1; // Trả về -1 nếu không tìm thấy
             }
         }
     }

@@ -190,7 +190,6 @@ namespace GymManagemement
                 int days;
                 if (!int.TryParse(CurrentMembershipData.Durations, out days))
                 {
-                    MessageBox.Show("Giá trị Durations không hợp lệ!");
                     days = 0;
                 }
 

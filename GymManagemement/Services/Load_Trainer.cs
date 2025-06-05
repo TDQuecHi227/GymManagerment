@@ -25,7 +25,7 @@ namespace GymManagemement.Service
                 {
                     conn.MyExecuteNonQuery(cmd, System.Data.CommandType.Text, ref err);
                 }
-                catch(SqlException ex)
+                catch (SqlException ex)
                 {
                     err = ex.Message;
                 }
@@ -49,7 +49,7 @@ namespace GymManagemement.Service
         {
             string query = "SELECT * FROM trainers";
 
-            var ds = conn.ExecuteQueryData(query,System.Data.CommandType.Text);
+            var ds = conn.ExecuteQueryData(query, System.Data.CommandType.Text);
             List<Loadtrainer> list = new List<Loadtrainer>();
 
             foreach (DataRow dr in ds.Tables[0].Rows)
@@ -124,6 +124,36 @@ namespace GymManagemement.Service
             cmd.Parameters.AddWithValue("@image", trainer.Image);
 
             return conn.MyExecuteNonQuery(cmd, CommandType.Text, ref err);
+        }
+        public string findTrainerById(int id)
+        {
+            string query = $"SELECT full_name FROM trainers WHERE trainer_id = {id}";
+            SqlCommand cmd = new SqlCommand(query);
+            var ds = conn.ExecuteQueryData(query, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return ds.Tables[0].Rows[0]["full_name"].ToString();
+            }
+            return null;
+        }
+        public Loadtrainer GetDataTrainerbyID(int id)
+        {
+            string query = $"SELECT * FROM trainers WHERE trainer_id = {id}";
+            var ds = conn.ExecuteQueryData(query, CommandType.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                return new Loadtrainer
+                {
+                    ID = Convert.ToInt32(dr["trainer_id"]),
+                    Name = dr["full_name"].ToString(),
+                    Phone = dr["phone"].ToString(),
+                    Email = dr["email"].ToString(),
+                    Specialization = dr["specialization"].ToString(),
+                    Image = dr["image"] != DBNull.Value ? (byte[])dr["image"] : null
+                };
+            }
+            return null;
         }
     }
 }

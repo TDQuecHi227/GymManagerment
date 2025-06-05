@@ -31,6 +31,7 @@ namespace GymManagemement
 
         private void FrmBuyMembership_Load(object sender, EventArgs e)
         {
+
             lbTenSP.Text = CurrentMembershipData.Name;
             lbGia.Text = Convert.ToInt32(CurrentMembershipData.Price).ToString("N0") + " VNĐ";
             lbTotal.Text = Convert.ToInt32(CurrentMembershipData.Price).ToString("N0") + " VNĐ";

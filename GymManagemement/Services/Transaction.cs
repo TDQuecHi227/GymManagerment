@@ -76,7 +76,7 @@ namespace GymManagemement.Services
             SqlCommand cmd = new SqlCommand(insertTransaction);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@phone", phone);
-            cmd.Parameters.AddWithValue("@total", membership.Price);
+            cmd.Parameters.AddWithValue("@total", Convert.ToInt32(membership.Price));
             cmd.Parameters.AddWithValue("@date", DateTime.Now);
             cmd.Parameters.AddWithValue("@method", method);
             int result = conn.ExecuteScalar(cmd);
@@ -89,8 +89,9 @@ namespace GymManagemement.Services
             cmdInsertMembership.Parameters.AddWithValue("@transaction_id", transactionIdValue);
             cmdInsertMembership.Parameters.AddWithValue("@membership_id", membership.Id);
             cmdInsertMembership.Parameters.AddWithValue("@start_date", DateTime.Now);
-            cmdInsertMembership.Parameters.AddWithValue("@end_date", DateTime.Now.AddDays(Convert.ToInt32(membership.Durations)));
-            cmdInsertMembership.Parameters.AddWithValue("@price", membership.Price); // Giá tổng của gói thành viên tại thời điểm mua
+            bool a = int.TryParse(membership.Durations.Replace(" Ngày", "").Trim(), out int durationDays);
+            cmdInsertMembership.Parameters.AddWithValue("@end_date", DateTime.Now.AddDays(durationDays));
+            cmdInsertMembership.Parameters.AddWithValue("@price", Convert.ToInt32(membership.Price)); // Giá tổng của gói thành viên tại thời điểm mua
             commands.Add(cmdInsertMembership);
             return conn.ExecuteTransaction(commands, ref err);
         }

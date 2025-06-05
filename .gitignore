@@ -1,3 +1,20 @@
-.vs/
-# Bỏ toàn bộ thư mục obj (bao gồm cả Debug, Release)
+# Build output
+bin/
 obj/
+
+# VS settings
+.vs/
+*.user
+*.suo
+
+# Packages
+packages/
+
+# Logs, backup
+*.log
+*.tmp
+*.bak
+
+# System
+Thumbs.db
+.DS_Store

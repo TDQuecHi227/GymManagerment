@@ -24,6 +24,7 @@ namespace GymManagemement
         public UCHome()
         {
             InitializeComponent();
+            guna2ComboBox1.SelectedIndex = 1;
         }
         private void GunaButton_Click(object sender, EventArgs e)
         {
@@ -107,34 +108,7 @@ namespace GymManagemement
             lbTotalTrainer.Text = sumAndRatioRepository.GetTotalTrainers().ToString();
             lbTotalRevenue.Text = sumAndRatioRepository.GetTotalRevenue().ToString("N0") + " VND";
             string ratiomember = sumAndRatioRepository.GetRatioMembers();
-            //string ratiotrainer = sumAndRatioRepository.GetRatioTrainers();
             string ratiorevenue = sumAndRatioRepository.GetRatioRevenue();
-            lbRatioMem.Text = ratiomember;
-            if(ratiomember.Contains("↑"))
-            {
-                lbRatioMem.ForeColor = Color.Green;
-            }
-            else if (ratiomember.Contains("↓"))
-            {
-                lbRatioMem.ForeColor = Color.Red;
-            }
-            else
-            {
-                lbRatioMem.ForeColor = Color.Gray;
-            }
-            //lbRatioTrainer.Text = ratiotrainer;
-            //if (ratiotrainer.Contains("↑"))
-            //{
-            //    lbRatioTrainer.ForeColor = Color.Green;
-            //}
-            //else if (ratiotrainer.Contains("↓"))
-            //{
-            //    lbRatioTrainer.ForeColor = Color.Red;
-            //}
-            //else
-            //{
-            //    lbRatioTrainer.ForeColor = Color.Gray;
-            //}
             lbRatioRevenue.Text = ratiorevenue;
             if (ratiorevenue.Contains("↑"))
             {

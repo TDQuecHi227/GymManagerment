@@ -377,7 +377,7 @@
             this.guna2TextBox6.BorderColor = System.Drawing.SystemColors.ScrollBar;
             this.guna2TextBox6.BorderRadius = 9;
             this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.No;
-            this.guna2TextBox6.DefaultText = "Access to all equipment";
+            this.guna2TextBox6.DefaultText = "Được dùng tất cả trang thiết bị";
             this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -403,7 +403,7 @@
             this.guna2TextBox5.BorderColor = System.Drawing.SystemColors.ScrollBar;
             this.guna2TextBox5.BorderRadius = 9;
             this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.No;
-            this.guna2TextBox5.DefaultText = "Free parking & water";
+            this.guna2TextBox5.DefaultText = "Miễn phí gửi xe";
             this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -431,9 +431,9 @@
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(9, 177);
             this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(152, 19);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(113, 19);
             this.guna2HtmlLabel10.TabIndex = 16;
-            this.guna2HtmlLabel10.Text = "Benefits for memberships";
+            this.guna2HtmlLabel10.Text = "Lợi ích của hội viên";
             // 
             // lb_ID
             // 

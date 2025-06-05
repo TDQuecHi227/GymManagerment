@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,11 @@ namespace GymManagemement.Services
         }
         public int GetTotalRevenue()
         {
-            string query = "SELECT SUM(total_amount) FROM transactions";
+            string query = @"SELECT SUM(total_amount) AS TotalRevenue
+                            FROM transactions
+                            WHERE MONTH(transaction_date) = MONTH(GETDATE())
+                              AND YEAR(transaction_date) = YEAR(GETDATE());
+                            ";
             return conn.ExecuteScalar(query);
         }
         public string GetRatioMembers()
